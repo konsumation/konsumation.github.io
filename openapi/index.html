@@ -32,6 +32,39 @@
             <tbody>
                     <tr>
                             <td class="swagger--summary-path" rowspan="1">
+                                <a href="#path--admin-backup">/admin/backup</a>
+                            </td>
+                        <td>
+                            <a href="#operation--admin-backup-get">GET</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="swagger--summary-path" rowspan="1">
+                                <a href="#path--admin-reload">/admin/reload</a>
+                            </td>
+                        <td>
+                            <a href="#operation--admin-reload-post">POST</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="swagger--summary-path" rowspan="1">
+                                <a href="#path--admin-stop">/admin/stop</a>
+                            </td>
+                        <td>
+                            <a href="#operation--admin-stop-post">POST</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="swagger--summary-path" rowspan="1">
                                 <a href="#path--authenticate">/authenticate</a>
                             </td>
                         <td>
@@ -72,9 +105,17 @@
                         </td>
                     </tr>
                     <tr>
-                            <td class="swagger--summary-path" rowspan="3">
+                            <td class="swagger--summary-path" rowspan="4">
                                 <a href="#path--category--category--meter">/category/{category}/meter</a>
                             </td>
+                        <td>
+                            <a href="#operation--category--category--meter-delete">DELETE</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
                         <td>
                             <a href="#operation--category--category--meter-get">GET</a>
                         </td>
@@ -99,9 +140,17 @@
                         </td>
                     </tr>
                     <tr>
-                            <td class="swagger--summary-path" rowspan="3">
+                            <td class="swagger--summary-path" rowspan="4">
                                 <a href="#path--category--category--note">/category/{category}/note</a>
                             </td>
+                        <td>
+                            <a href="#operation--category--category--note-delete">DELETE</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
                         <td>
                             <a href="#operation--category--category--note-get">GET</a>
                         </td>
@@ -152,6 +201,17 @@
                             
                         </td>
                     </tr>
+                    <tr>
+                            <td class="swagger--summary-path" rowspan="1">
+                                <a href="#path--state">/state</a>
+                            </td>
+                        <td>
+                            <a href="#operation--state-get">GET</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
             </tbody>
         </table>
     
@@ -159,6 +219,123 @@
     
     <h2>Paths</h2>
     
+        
+        <span id="path--admin-backup"></span>
+            <div id="operation--admin-backup-get" class="swagger--panel-operation-get panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/admin/backup</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Create backup.</p>
+            
+                    </section>
+            
+                    
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Backup data as text.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
+        
+        <span id="path--admin-reload"></span>
+            <div id="operation--admin-reload-post" class="swagger--panel-operation-post panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/admin/reload</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Reload konsum systemd config.</p>
+            
+                    </section>
+            
+                    
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Progress message.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
+        
+        <span id="path--admin-stop"></span>
+            <div id="operation--admin-stop-post" class="swagger--panel-operation-post panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/admin/stop</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Stop konsum server.</p>
+            
+                    </section>
+            
+                    
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Progress message.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
         
         <span id="path--authenticate"></span>
             <div id="operation--authenticate-post" class="swagger--panel-operation-post panel">
@@ -456,6 +633,90 @@
             </div>
         
         <span id="path--category--category--meter"></span>
+            <div id="operation--category--category--meter-delete" class="swagger--panel-operation-delete panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">DELETE</span> <strong>/category/{category}/meter</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Delete a meter.</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                category
+                                            </td>
+                                            <td><p>ID of category the meter belongs to.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                mater
+                                            </td>
+                                            <td><p>ID of meter to be deleted.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Success message.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
             <div id="operation--category--category--meter-get" class="swagger--panel-operation-get panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
@@ -500,7 +761,7 @@
                                             <td>
                                                 mater
                                             </td>
-                                            <td><p>ID of meter to be updated.</p>
+                                            <td><p>ID of meter to be deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -584,7 +845,7 @@
                                             <td>
                                                 mater
                                             </td>
-                                            <td><p>ID of meter to be updated.</p>
+                                            <td><p>ID of meter to be deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -668,7 +929,7 @@
                                             <td>
                                                 mater
                                             </td>
-                                            <td><p>ID of meter to be updated.</p>
+                                            <td><p>ID of meter to be deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -710,6 +971,90 @@
             </div>
         
         <span id="path--category--category--note"></span>
+            <div id="operation--category--category--note-delete" class="swagger--panel-operation-delete panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">DELETE</span> <strong>/category/{category}/note</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Delete a note.</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                category
+                                            </td>
+                                            <td><p>ID of category to note belongs to.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                note
+                                            </td>
+                                            <td><p>ID of note to be deleted.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Success message.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
             <div id="operation--category--category--note-get" class="swagger--panel-operation-get panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
@@ -754,7 +1099,7 @@
                                             <td>
                                                 note
                                             </td>
-                                            <td><p>ID of note to be updated.</p>
+                                            <td><p>ID of note to be deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -838,7 +1183,7 @@
                                             <td>
                                                 note
                                             </td>
-                                            <td><p>ID of note to be updated.</p>
+                                            <td><p>ID of note to be deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -922,7 +1267,7 @@
                                             <td>
                                                 note
                                             </td>
-                                            <td><p>ID of note to be updated.</p>
+                                            <td><p>ID of note to be deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -1217,6 +1562,45 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <p>Success message.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
+        
+        <span id="path--state"></span>
+            <div id="operation--state-get" class="swagger--panel-operation-get panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/state</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Retrieve application state.</p>
+            
+                    </section>
+            
+                    
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Server status.</p>
                                             
                                                 </div>
                                             </div>
