@@ -53,17 +53,6 @@
                         </td>
                     </tr>
                     <tr>
-                            <td class="swagger--summary-path" rowspan="1">
-                                <a href="#path--category-:category-value">/category/:category/value</a>
-                            </td>
-                        <td>
-                            <a href="#operation--category-:category-value-delete">DELETE</a>
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                    <tr>
                             <td class="swagger--summary-path" rowspan="2">
                                 <a href="#path--category--category-">/category/{category}</a>
                             </td>
@@ -83,7 +72,7 @@
                         </td>
                     </tr>
                     <tr>
-                            <td class="swagger--summary-path" rowspan="1">
+                            <td class="swagger--summary-path" rowspan="3">
                                 <a href="#path--category--category--meter">/category/{category}/meter</a>
                             </td>
                         <td>
@@ -94,7 +83,23 @@
                         </td>
                     </tr>
                     <tr>
-                            <td class="swagger--summary-path" rowspan="1">
+                        <td>
+                            <a href="#operation--category--category--meter-post">POST</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#operation--category--category--meter-put">PUT</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="swagger--summary-path" rowspan="3">
                                 <a href="#path--category--category--note">/category/{category}/note</a>
                             </td>
                         <td>
@@ -105,9 +110,33 @@
                         </td>
                     </tr>
                     <tr>
-                            <td class="swagger--summary-path" rowspan="2">
+                        <td>
+                            <a href="#operation--category--category--note-post">POST</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#operation--category--category--note-put">PUT</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="swagger--summary-path" rowspan="3">
                                 <a href="#path--category--category--value">/category/{category}/value</a>
                             </td>
+                        <td>
+                            <a href="#operation--category--category--value-delete">DELETE</a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
                         <td>
                             <a href="#operation--category--category--value-get">GET</a>
                         </td>
@@ -219,7 +248,7 @@
                                     <dd class="sw-response-401">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p>Authentication failed</p>
+                                                    <p>Authentication failed.</p>
                                             
                                                 </div>
                                             </div>
@@ -242,73 +271,11 @@
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        
-                    </section>
-            
-                    
-                    
-                </div>
-            </div>
-        
-        <span id="path--category-:category-value"></span>
-            <div id="operation--category-:category-value-delete" class="swagger--panel-operation-delete panel">
-                <div class="panel-heading">
-                    <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">DELETE</span> <strong>/category/:category/value</strong></h3>
-                </div>
-                <div class="panel-body">
-                    <section class="sw-operation-description">
-                        <p>Delete a value from a category</p>
+                        <p>retrieve list of categories.</p>
             
                     </section>
             
-                        
-                            <section class="sw-request-body">
-                                
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p><p>time of the value</p>
-                        </p>
-                                            </div>
-                                            <div class="col-md-6 sw-request-model">
-                            <div  class="panel panel-definition">
-                                <div class="panel-body">
-                                        
-                                </div>
-                            </div></div>
-                                        </div>
-                            </section>        
-                        <section class="sw-request-params">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="sw-param-name"></th>
-                                    <th class="sw-param-description"></th>
-                                    <th class="sw-param-type"></th>
-                                    <th class="sw-param-data-type"></th>
-                                    <th class="sw-param-annotation"></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                        <tr>
-                                            <td>
-                                                category
-                                            </td>
-                                            <td><p>ID of category from where the value bill deleted</p>
-                                        </td>
-                                            <td>path</td>
-                                            <td>
-                                        <span class="json-property-type">object</span>
-                                        <span class="json-property-range" title="Value limits"></span>
-                                        
-                                            </td>
-                                            <td>
-                                                    <span class="json-property-required"></span>
-                                            </td>
-                                        </tr>
-                                </tbody>
-                            </table>
-                        </section>
+                    
                     
                 </div>
             </div>
@@ -321,7 +288,8 @@
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        
+                        <p>Delete a category.</p>
+            
                     </section>
             
                     
@@ -366,7 +334,8 @@
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        
+                        <p>insert a new category</p>
+            
                     </section>
             
                     
@@ -413,7 +382,7 @@
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        <p>list meters of a category</p>
+                        <p>list meters of a category.</p>
             
                     </section>
             
@@ -434,7 +403,7 @@
                                             <td>
                                                 category
                                             </td>
-                                            <td><p>ID of category to be listed</p>
+                                            <td><p>ID of category the meter belongs to.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -450,7 +419,131 @@
                                             <td>
                                                 mater
                                             </td>
-                                            <td><p>ID of meter to be listed</p>
+                                            <td><p>ID of meter to be updated.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                </div>
+            </div>
+            <div id="operation--category--category--meter-post" class="swagger--panel-operation-post panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/category/{category}/meter</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Update a meter.</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                category
+                                            </td>
+                                            <td><p>ID of category the meter belongs to.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                mater
+                                            </td>
+                                            <td><p>ID of meter to be updated.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                </div>
+            </div>
+            <div id="operation--category--category--meter-put" class="swagger--panel-operation-put panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">PUT</span> <strong>/category/{category}/meter</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Add a meter to a category.</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                category
+                                            </td>
+                                            <td><p>ID of category the meter belongs to.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                mater
+                                            </td>
+                                            <td><p>ID of meter to be updated.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -477,7 +570,7 @@
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        <p>list notes of a category</p>
+                        <p>list notes of a category.</p>
             
                     </section>
             
@@ -498,7 +591,7 @@
                                             <td>
                                                 category
                                             </td>
-                                            <td><p>ID of category to be listed</p>
+                                            <td><p>ID of category to note belongs to.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -514,7 +607,131 @@
                                             <td>
                                                 note
                                             </td>
-                                            <td><p>ID of note to be listed</p>
+                                            <td><p>ID of note to be updated.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                </div>
+            </div>
+            <div id="operation--category--category--note-post" class="swagger--panel-operation-post panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/category/{category}/note</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Update a note.</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                category
+                                            </td>
+                                            <td><p>ID of category to note belongs to.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                note
+                                            </td>
+                                            <td><p>ID of note to be updated.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                </div>
+            </div>
+            <div id="operation--category--category--note-put" class="swagger--panel-operation-put panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">PUT</span> <strong>/category/{category}/note</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>add a note to a category.</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                category
+                                            </td>
+                                            <td><p>ID of category to note belongs to.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                note
+                                            </td>
+                                            <td><p>ID of note to be updated.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -534,14 +751,14 @@
             </div>
         
         <span id="path--category--category--value"></span>
-            <div id="operation--category--category--value-get" class="swagger--panel-operation-get panel">
+            <div id="operation--category--category--value-delete" class="swagger--panel-operation-delete panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/category/{category}/value</strong></h3>
+                    <h3 class="panel-title"><span class="operation-name">DELETE</span> <strong>/category/{category}/value</strong></h3>
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        <p>List values of a category</p>
+                        <p>Delete a value from a category.</p>
             
                     </section>
             
@@ -550,7 +767,7 @@
                                 
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p><p>time of the value</p>
+                                                <p><p>Time the value was present.</p>
                         </p>
                                             </div>
                                             <div class="col-md-6 sw-request-model">
@@ -577,7 +794,68 @@
                                             <td>
                                                 category
                                             </td>
-                                            <td><p>ID of category that needs to be retrieved</p>
+                                            <td><p>ID of category from where the value bill deleted.</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                </div>
+            </div>
+            <div id="operation--category--category--value-get" class="swagger--panel-operation-get panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/category/{category}/value</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>List values of a category.</p>
+            
+                    </section>
+            
+                        
+                            <section class="sw-request-body">
+                                
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p><p>Time the value was present.</p>
+                        </p>
+                                            </div>
+                                            <div class="col-md-6 sw-request-model">
+                            <div  class="panel panel-definition">
+                                <div class="panel-body">
+                                        
+                                </div>
+                            </div></div>
+                                        </div>
+                            </section>        
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                category
+                                            </td>
+                                            <td><p>ID of category from where the value bill deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
@@ -602,7 +880,7 @@
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        <p>Insert a value into a category</p>
+                        <p>Insert a value into a category.</p>
             
                     </section>
             
@@ -611,7 +889,7 @@
                                 
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p><p>time of the value</p>
+                                                <p><p>Time the value was present.</p>
                         </p>
                                             </div>
                                             <div class="col-md-6 sw-request-model">
@@ -638,7 +916,7 @@
                                             <td>
                                                 category
                                             </td>
-                                            <td><p>ID of category that needs to be retrieved</p>
+                                            <td><p>ID of category from where the value bill deleted.</p>
                                         </td>
                                             <td>path</td>
                                             <td>
