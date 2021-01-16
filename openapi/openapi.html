@@ -1,0 +1,2234 @@
+<html><head><meta charset="UTF-8"><title>collect resource usage in a home environment v0.0.0-semantic-release</title></head><body><!-- Generator: Widdershins v4.0.1 -->
+<h1 id="collect-resource-usage-in-a-home-environment">collect resource usage in a home environment v0.0.0-semantic-release</h1>
+<blockquote>
+<p>Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.</p>
+</blockquote>
+<h1>Authentication</h1>
+<ul>
+<li>HTTP Authentication, scheme: bearer</li>
+</ul>
+<h1 id="collect-resource-usage-in-a-home-environment-default">Default</h1>
+<h2>post__admin_stop</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X POST /admin/stop \
+  -H 'Accept: application/text'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/text'</span>
+};
+
+fetch(<span class="hljs-string">'/admin/stop'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /admin/stop</code></p>
+<p>Stop konsum server.</p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<h3 id="post__admin_stop-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Progress message.</td>
+<td><a href="#schematextonlymessage">TextOnlyMessage</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>post__admin_reload</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X POST /admin/reload \
+  -H 'Accept: application/text'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/text'</span>
+};
+
+fetch(<span class="hljs-string">'/admin/reload'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /admin/reload</code></p>
+<p>Reload konsum systemd config.</p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<h3 id="post__admin_reload-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Progress message.</td>
+<td><a href="#schematextonlymessage">TextOnlyMessage</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>get__admin_backup</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X GET /admin/backup \
+  -H 'Accept: application/text'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/text'</span>
+};
+
+fetch(<span class="hljs-string">'/admin/backup'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>GET /admin/backup</code></p>
+<p>Create backup.</p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<h3 id="get__admin_backup-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Backup data as text.</td>
+<td><a href="#schematextonlymessage">TextOnlyMessage</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>get__state</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X GET /state \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/state'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>GET /state</code></p>
+<p>Retrieve application state.</p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>[
+  {
+    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"uptime"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"memory"</span>: {}
+  }
+]
+</code></pre>
+<h3 id="get__state-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Server status.</td>
+<td>Inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get__state-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>» version</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The software version of the server.</td>
+</tr>
+<tr>
+<td>» uptime</td>
+<td>number</td>
+<td>false</td>
+<td>none</td>
+<td>The duration the sever is up and running.</td>
+</tr>
+<tr>
+<td>» memory</td>
+<td>object</td>
+<td>false</td>
+<td>none</td>
+<td>The memory usage of the server.</td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>post__authenticate</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X POST /authenticate \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code><span class="hljs-keyword">const</span> inputBody = <span class="hljs-string">'{
+  "username": "string",
+  "password": "string"
+}'</span>;
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Content-Type'</span>:<span class="hljs-string">'application/json'</span>,
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/authenticate'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+  <span class="hljs-attr">body</span>: inputBody,
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /authenticate</code></p>
+<p>Login to request api token.</p>
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"username"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"password"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="post__authenticate-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemaauthrequest">AuthRequest</a></td>
+<td>true</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<blockquote>
+<p>401 Response</p>
+</blockquote>
+<h3 id="post__authenticate-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Token generated.</td>
+<td><a href="#schemaauthresponse">AuthResponse</a></td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Authentication failed.</td>
+<td><a href="#schematextonlymessage">TextOnlyMessage</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>tags__category</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X TAGS /category
+
+</code></pre>
+<pre class="nohighlight example"><code>
+fetch(<span class="hljs-string">'/category'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'TAGS'</span>
+
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>TAGS /category</code></p>
+<h3 id="tags__category-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>operationId__category</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X OPERATIONID /category
+
+</code></pre>
+<pre class="nohighlight example"><code>
+fetch(<span class="hljs-string">'/category'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'OPERATIONID'</span>
+
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>OPERATIONID /category</code></p>
+<h3 id="operationid__category-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>get__category</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X GET /category \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>GET /category</code></p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>[
+  {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"EV"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"mains power"</span>,
+    <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"m3"</span>
+  }
+]
+</code></pre>
+<h3 id="get__category-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>A list of categories.</td>
+<td>Inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get__category-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>[<a href="#schemacategory">Category</a>]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>» id</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The id of the category.</td>
+</tr>
+<tr>
+<td>» description</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The human readable description of your category.</td>
+</tr>
+<tr>
+<td>» unit</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The physical measurment unit.</td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>security__category</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X SECURITY /category
+
+</code></pre>
+<pre class="nohighlight example"><code>
+fetch(<span class="hljs-string">'/category'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'SECURITY'</span>
+
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>SECURITY /category</code></p>
+<h3 id="security__category-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>put__category_{category}</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X PUT /category/{category} \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'PUT'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>PUT /category/{category}</code></p>
+<p>insert a new category</p>
+<h3 id="put__category_{category}-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category that needs to be deleted</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="put__category_{category}-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>security__category_{category}</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X SECURITY /category/{category}
+
+</code></pre>
+<pre class="nohighlight example"><code>
+fetch(<span class="hljs-string">'/category/{category}'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'SECURITY'</span>
+
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>SECURITY /category/{category}</code></p>
+<h3 id="security__category_{category}-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category that needs to be deleted</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security__category_{category}-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>delete__category_{category}</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X DELETE /category/{category} \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'DELETE'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>DELETE /category/{category}</code></p>
+<p>Delete a category.</p>
+<h3 id="delete__category_{category}-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category that needs to be deleted</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="delete__category_{category}-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+<tr>
+<td>404</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td>
+<td>No such category error message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>get__category_{category}_value</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X GET /category/{category}/value \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/value'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>GET /category/{category}/value</code></p>
+<p>List values of a category.</p>
+<h3 id="get__category_{category}_value-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category from where the value bill deleted.</td>
+</tr>
+<tr>
+<td>time</td>
+<td>body</td>
+<td>string</td>
+<td>true</td>
+<td>Time the value was present.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>[
+  {}
+]
+</code></pre>
+<h3 id="get__category_{category}_value-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Value list.</td>
+<td>Inline</td>
+</tr>
+<tr>
+<td>406</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.6">Not Acceptable</a></td>
+<td>Unsupported content-type.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get__category_{category}_value-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>[<a href="#schemavalue">Value</a>]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>post__category_{category}_value</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X POST /category/{category}/value \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/value'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /category/{category}/value</code></p>
+<p>Insert a value into a category.</p>
+<h3 id="post__category_{category}_value-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category from where the value bill deleted.</td>
+</tr>
+<tr>
+<td>time</td>
+<td>body</td>
+<td>string</td>
+<td>true</td>
+<td>Time the value was present.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="post__category_{category}_value-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>delete__category_{category}_value</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X DELETE /category/{category}/value \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/value'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'DELETE'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>DELETE /category/{category}/value</code></p>
+<p>Delete a value from a category.</p>
+<h3 id="delete__category_{category}_value-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category from where the value bill deleted.</td>
+</tr>
+<tr>
+<td>time</td>
+<td>body</td>
+<td>string</td>
+<td>true</td>
+<td>Time the value was present.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="delete__category_{category}_value-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>get__category_{category}_meter</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X GET /category/{category}/meter \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/meter'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>GET /category/{category}/meter</code></p>
+<p>List meters of a category.</p>
+<h3 id="get__category_{category}_meter-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category the meter belongs to.</td>
+</tr>
+<tr>
+<td>mater</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of meter to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>[
+  {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"serial"</span>: <span class="hljs-string">"string"</span>
+  }
+]
+</code></pre>
+<h3 id="get__category_{category}_meter-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>List of meters.</td>
+<td>Inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get__category_{category}_meter-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>[<a href="#schemameter">Meter</a>]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>» id</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The id of the meter.</td>
+</tr>
+<tr>
+<td>» description</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The human readable description of your meter.</td>
+</tr>
+<tr>
+<td>» unit</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The physical measurment unit.</td>
+</tr>
+<tr>
+<td>» serial</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The serial number of the meter.</td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>put__category_{category}_meter</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X PUT /category/{category}/meter \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/meter'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'PUT'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>PUT /category/{category}/meter</code></p>
+<p>Add a meter to a category.</p>
+<h3 id="put__category_{category}_meter-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category the meter belongs to.</td>
+</tr>
+<tr>
+<td>mater</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of meter to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="put__category_{category}_meter-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>post__category_{category}_meter</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X POST /category/{category}/meter \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/meter'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /category/{category}/meter</code></p>
+<p>Update a meter.</p>
+<h3 id="post__category_{category}_meter-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category the meter belongs to.</td>
+</tr>
+<tr>
+<td>mater</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of meter to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="post__category_{category}_meter-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>delete__category_{category}_meter</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X DELETE /category/{category}/meter \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/meter'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'DELETE'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>DELETE /category/{category}/meter</code></p>
+<p>Delete a meter.</p>
+<h3 id="delete__category_{category}_meter-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category the meter belongs to.</td>
+</tr>
+<tr>
+<td>mater</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of meter to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="delete__category_{category}_meter-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>get__category_{category}_note</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X GET /category/{category}/note \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/note'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>GET /category/{category}/note</code></p>
+<p>List notes of a category.</p>
+<h3 id="get__category_{category}_note-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category to note belongs to.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of note to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>[
+  {}
+]
+</code></pre>
+<h3 id="get__category_{category}_note-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>List of notes.</td>
+<td>Inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get__category_{category}_note-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>[<a href="#schemanote">Note</a>]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>put__category_{category}_note</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X PUT /category/{category}/note \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/note'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'PUT'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>PUT /category/{category}/note</code></p>
+<p>add a note to a category.</p>
+<h3 id="put__category_{category}_note-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category to note belongs to.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of note to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="put__category_{category}_note-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>post__category_{category}_note</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X POST /category/{category}/note \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/note'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /category/{category}/note</code></p>
+<p>Update a note.</p>
+<h3 id="post__category_{category}_note-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category to note belongs to.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of note to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="post__category_{category}_note-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>delete__category_{category}_note</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X DELETE /category/{category}/note \
+  -H 'Accept: application/json'
+
+</code></pre>
+<pre class="nohighlight example"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>:<span class="hljs-string">'application/json'</span>
+};
+
+fetch(<span class="hljs-string">'/category/{category}/note'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'DELETE'</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>DELETE /category/{category}/note</code></p>
+<p>Delete a note.</p>
+<h3 id="delete__category_{category}_note-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of category to note belongs to.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>ID of note to be deleted.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h3 id="delete__category_{category}_note-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schemamessage">Message</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h1>Schemas</h1>
+<h2 id="tocS_Category">Category</h2>
+<!-- backwards compatibility -->
+<a id="schemacategory"></a>
+<a id="schema_Category"></a>
+<a id="tocScategory"></a>
+<a id="tocscategory"></a>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"EV"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"mains power"</span>,
+  <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"m3"</span>
+}
+
+</code></pre>
+<h3>Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The id of the category.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The human readable description of your category.</td>
+</tr>
+<tr>
+<td>unit</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The physical measurment unit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_Meter">Meter</h2>
+<!-- backwards compatibility -->
+<a id="schemameter"></a>
+<a id="schema_Meter"></a>
+<a id="tocSmeter"></a>
+<a id="tocsmeter"></a>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"serial"</span>: <span class="hljs-string">"string"</span>
+}
+
+</code></pre>
+<h3>Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The id of the meter.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The human readable description of your meter.</td>
+</tr>
+<tr>
+<td>unit</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The physical measurment unit.</td>
+</tr>
+<tr>
+<td>serial</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The serial number of the meter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_Note">Note</h2>
+<!-- backwards compatibility -->
+<a id="schemanote"></a>
+<a id="schema_Note"></a>
+<a id="tocSnote"></a>
+<a id="tocsnote"></a>
+<pre class="nohighlight example"><code>{}
+
+</code></pre>
+<h3>Properties</h3>
+<p><em>None</em></p>
+<h2 id="tocS_Value">Value</h2>
+<!-- backwards compatibility -->
+<a id="schemavalue"></a>
+<a id="schema_Value"></a>
+<a id="tocSvalue"></a>
+<a id="tocsvalue"></a>
+<pre class="nohighlight example"><code>{}
+
+</code></pre>
+<h3>Properties</h3>
+<p><em>None</em></p>
+<h2 id="tocS_State">State</h2>
+<!-- backwards compatibility -->
+<a id="schemastate"></a>
+<a id="schema_State"></a>
+<a id="tocSstate"></a>
+<a id="tocsstate"></a>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"uptime"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"memory"</span>: {}
+}
+
+</code></pre>
+<h3>Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The software version of the server.</td>
+</tr>
+<tr>
+<td>uptime</td>
+<td>number</td>
+<td>false</td>
+<td>none</td>
+<td>The duration the sever is up and running.</td>
+</tr>
+<tr>
+<td>memory</td>
+<td>object</td>
+<td>false</td>
+<td>none</td>
+<td>The memory usage of the server.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_AuthRequest">AuthRequest</h2>
+<!-- backwards compatibility -->
+<a id="schemaauthrequest"></a>
+<a id="schema_AuthRequest"></a>
+<a id="tocSauthrequest"></a>
+<a id="tocsauthrequest"></a>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"username"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"password"</span>: <span class="hljs-string">"string"</span>
+}
+
+</code></pre>
+<h3>Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_AuthResponse">AuthResponse</h2>
+<!-- backwards compatibility -->
+<a id="schemaauthresponse"></a>
+<a id="schema_AuthResponse"></a>
+<a id="tocSauthresponse"></a>
+<a id="tocsauthresponse"></a>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"string"</span>
+}
+
+</code></pre>
+<h3>Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>refresh_token</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_Message">Message</h2>
+<!-- backwards compatibility -->
+<a id="schemamessage"></a>
+<a id="schema_Message"></a>
+<a id="tocSmessage"></a>
+<a id="tocsmessage"></a>
+<pre class="nohighlight example"><code>{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+
+</code></pre>
+<h3>Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_TextOnlyMessage">TextOnlyMessage</h2>
+<!-- backwards compatibility -->
+<a id="schematextonlymessage"></a>
+<a id="schema_TextOnlyMessage"></a>
+<a id="tocStextonlymessage"></a>
+<a id="tocstextonlymessage"></a>
+<pre class="nohighlight example"><code><span class="hljs-string">"string"</span>
+
+</code></pre>
+<h3>Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
