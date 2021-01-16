@@ -209,6 +209,48 @@ Login to request api token.
 This operation does not require authentication
 </aside>
 
+## tags__category
+
+> Code samples
+
+```shell
+# You can also use wget
+curl -X TAGS /category
+
+```
+
+`TAGS /category`
+
+<h3 id="tags__category-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## operationId__category
+
+> Code samples
+
+```shell
+# You can also use wget
+curl -X OPERATIONID /category
+
+```
+
+`OPERATIONID /category`
+
+<h3 id="operationid__category-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
 ## get__category
 
 > Code samples
@@ -221,8 +263,6 @@ curl -X GET /category \
 ```
 
 `GET /category`
-
-retrieve list of categories.
 
 > Example responses
 
@@ -254,6 +294,27 @@ Status Code **200**
 |» id|string|true|none|The id of the category.|
 |» description|string|false|none|The human readable description of your category.|
 |» unit|string|false|none|The physical measurment unit.|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## security__category
+
+> Code samples
+
+```shell
+# You can also use wget
+curl -X SECURITY /category
+
+```
+
+`SECURITY /category`
+
+<h3 id="security__category-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
 
 <aside class="success">
 This operation does not require authentication
