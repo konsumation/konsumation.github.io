@@ -1,7 +1,8 @@
 ---
 title: collect resource usage in a home environment v0.0.0-semantic-release
 language_tabs:
-  - shell: Shell
+  - shell: curl
+  - javascript: fetch
 toc_footers: []
 includes: []
 search: true
@@ -16,6 +17,10 @@ headingLevel: 2
 
 > Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
 
+# Authentication
+
+- HTTP Authentication, scheme: bearer 
+
 <h1 id="collect-resource-usage-in-a-home-environment-default">Default</h1>
 
 ## post__admin_stop
@@ -26,6 +31,26 @@ headingLevel: 2
 # You can also use wget
 curl -X POST /admin/stop \
   -H 'Accept: application/text'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/text'
+};
+
+fetch('/admin/stop',
+{
+  method: 'POST',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -58,6 +83,26 @@ curl -X POST /admin/reload \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/text'
+};
+
+fetch('/admin/reload',
+{
+  method: 'POST',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `POST /admin/reload`
 
 Reload konsum systemd config.
@@ -87,6 +132,26 @@ curl -X GET /admin/backup \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/text'
+};
+
+fetch('/admin/backup',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `GET /admin/backup`
 
 Create backup.
@@ -113,6 +178,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X GET /state \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/state',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -163,6 +248,30 @@ This operation does not require authentication
 curl -X POST /authenticate \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+const inputBody = '{
+  "username": "string",
+  "password": "string"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('/authenticate',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -219,6 +328,21 @@ curl -X TAGS /category
 
 ```
 
+```javascript
+
+fetch('/category',
+{
+  method: 'TAGS'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `TAGS /category`
 
 <h3 id="tags__category-responses">Responses</h3>
@@ -237,6 +361,21 @@ This operation does not require authentication
 ```shell
 # You can also use wget
 curl -X OPERATIONID /category
+
+```
+
+```javascript
+
+fetch('/category',
+{
+  method: 'OPERATIONID'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -259,6 +398,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X GET /category \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -309,6 +468,21 @@ curl -X SECURITY /category
 
 ```
 
+```javascript
+
+fetch('/category',
+{
+  method: 'SECURITY'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `SECURITY /category`
 
 <h3 id="security__category-responses">Responses</h3>
@@ -328,6 +502,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X PUT /category/{category} \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}',
+{
+  method: 'PUT',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -361,6 +555,48 @@ insert a new category
 This operation does not require authentication
 </aside>
 
+## security__category_{category}
+
+> Code samples
+
+```shell
+# You can also use wget
+curl -X SECURITY /category/{category}
+
+```
+
+```javascript
+
+fetch('/category/{category}',
+{
+  method: 'SECURITY'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`SECURITY /category/{category}`
+
+<h3 id="security__category_{category}-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|category|path|string|true|ID of category that needs to be deleted|
+
+<h3 id="security__category_{category}-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
 ## delete__category_{category}
 
 > Code samples
@@ -369,6 +605,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X DELETE /category/{category} \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}',
+{
+  method: 'DELETE',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -411,6 +667,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X GET /category/{category}/value \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/value',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -465,6 +741,26 @@ curl -X POST /category/{category}/value \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/value',
+{
+  method: 'POST',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `POST /category/{category}/value`
 
 Insert a value into a category.
@@ -507,6 +803,26 @@ curl -X DELETE /category/{category}/value \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/value',
+{
+  method: 'DELETE',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `DELETE /category/{category}/value`
 
 Delete a value from a category.
@@ -546,6 +862,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X GET /category/{category}/meter \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/meter',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -608,6 +944,26 @@ curl -X PUT /category/{category}/meter \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/meter',
+{
+  method: 'PUT',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `PUT /category/{category}/meter`
 
 Add a meter to a category.
@@ -647,6 +1003,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X POST /category/{category}/meter \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/meter',
+{
+  method: 'POST',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -692,6 +1068,26 @@ curl -X DELETE /category/{category}/meter \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/meter',
+{
+  method: 'DELETE',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `DELETE /category/{category}/meter`
 
 Delete a meter.
@@ -731,6 +1127,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X GET /category/{category}/note \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/note',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
@@ -784,6 +1200,26 @@ curl -X PUT /category/{category}/note \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/note',
+{
+  method: 'PUT',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `PUT /category/{category}/note`
 
 add a note to a category.
@@ -826,6 +1262,26 @@ curl -X POST /category/{category}/note \
 
 ```
 
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/note',
+{
+  method: 'POST',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 `POST /category/{category}/note`
 
 Update a note.
@@ -865,6 +1321,26 @@ This operation does not require authentication
 # You can also use wget
 curl -X DELETE /category/{category}/note \
   -H 'Accept: application/json'
+
+```
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('/category/{category}/note',
+{
+  method: 'DELETE',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
