@@ -280,7 +280,45 @@ fetch(<span class="hljs-string">'/state'</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2>post__authenticate</h2>
+<h2>tags__authenticate</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="nohighlight example"><code><span class="hljs-meta">#</span><span class="bash"> You can also use wget</span>
+curl -X TAGS /authenticate
+
+</code></pre>
+<pre class="nohighlight example"><code>
+fetch(<span class="hljs-string">'/authenticate'</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'TAGS'</span>
+
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>TAGS /authenticate</code></p>
+<h3 id="tags__authenticate-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2>authenticate</h2>
+<p><a id="opIdauthenticate"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -322,7 +360,7 @@ fetch(<span class="hljs-string">'/authenticate'</span>,
   <span class="hljs-attr">"password"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<h3 id="post__authenticate-parameters">Parameters</h3>
+<h3 id="authenticate-parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -357,7 +395,7 @@ fetch(<span class="hljs-string">'/authenticate'</span>,
 <blockquote>
 <p>401 Response</p>
 </blockquote>
-<h3 id="post__authenticate-responses">Responses</h3>
+<h3 id="authenticate-responses">Responses</h3>
 <table>
 <thead>
 <tr>

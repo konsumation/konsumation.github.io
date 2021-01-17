@@ -239,7 +239,45 @@ Status Code **200**
 This operation does not require authentication
 </aside>
 
-## post__authenticate
+## tags__authenticate
+
+> Code samples
+
+```shell
+# You can also use wget
+curl -X TAGS /authenticate
+
+```
+
+```javascript
+
+fetch('/authenticate',
+{
+  method: 'TAGS'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`TAGS /authenticate`
+
+<h3 id="tags__authenticate-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## authenticate
+
+<a id="opIdauthenticate"></a>
 
 > Code samples
 
@@ -288,7 +326,7 @@ Login to request api token.
 }
 ```
 
-<h3 id="post__authenticate-parameters">Parameters</h3>
+<h3 id="authenticate-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -307,7 +345,7 @@ Login to request api token.
 
 > 401 Response
 
-<h3 id="post__authenticate-responses">Responses</h3>
+<h3 id="authenticate-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
