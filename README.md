@@ -2,5 +2,4 @@
 
 ## openapi
 
-- [openapi A](openapi/index.html)
-- [openapi B](openapi/openapi.md)
+[openapi](openapi/index.html)
