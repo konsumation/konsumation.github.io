@@ -1535,12 +1535,17 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#get__admin_backup" class="toc-h2 toc-link" data-title="">get__admin_backup</a>
+                    <a href="#backupdataonserver" class="toc-h2 toc-link" data-title="">backupDataOnServer</a>
                     
                   </li>
                 
                   <li>
-                    <a href="#get__state" class="toc-h2 toc-link" data-title="">get__state</a>
+                    <a href="#backupdata" class="toc-h2 toc-link" data-title="">backupData</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#getservicestate" class="toc-h2 toc-link" data-title="">getServiceState</a>
                     
                   </li>
                 
@@ -1575,7 +1580,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#put__category_-category-" class="toc-h2 toc-link" data-title="">put__category_{category}</a>
+                    <a href="#addcategories" class="toc-h2 toc-link" data-title="">addCategories</a>
                     
                   </li>
                 
@@ -1836,7 +1841,66 @@ fetch(<span class="hljs-string">&#x27;/admin/reload&#x27;</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2 id="get__admin_backup">get__admin_backup</h2>
+<h2 id="backupdataonserver">backupDataOnServer</h2>
+<p><a id="opIdbackupDataOnServer"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
+curl -X POST /admin/backup \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span>
+
+</code></pre>
+<pre class="highlight tab tab-javascript"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>
+};
+
+fetch(<span class="hljs-string">&#x27;/admin/backup&#x27;</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;POST&#x27;</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /admin/backup</code></p>
+<p>Create backup on server.</p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<h3 id="backupdataonserver-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Success message.</td>
+<td><a href="#schematextonlymessage">TextOnlyMessage</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h2 id="backupdata">backupData</h2>
+<p><a id="opIdbackupData"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -1871,7 +1935,7 @@ fetch(<span class="hljs-string">&#x27;/admin/backup&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<h3 id="get__admin_backup-responses">Responses</h3>
+<h3 id="backupdata-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -1893,7 +1957,8 @@ fetch(<span class="hljs-string">&#x27;/admin/backup&#x27;</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2 id="get__state">get__state</h2>
+<h2 id="getservicestate">getServiceState</h2>
+<p><a id="opIdgetServiceState"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -1921,7 +1986,7 @@ fetch(<span class="hljs-string">&#x27;/state&#x27;</span>,
 
 </code></pre>
 <p><code>GET /state</code></p>
-<p>Retrieve application state.</p>
+<p>Retrieve service state.</p>
 <blockquote>
 <p>Example responses</p>
 </blockquote>
@@ -1936,7 +2001,7 @@ fetch(<span class="hljs-string">&#x27;/state&#x27;</span>,
   }
 ]
 </code></pre>
-<h3 id="get__state-responses">Responses</h3>
+<h3 id="getservicestate-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -1950,12 +2015,12 @@ fetch(<span class="hljs-string">&#x27;/state&#x27;</span>,
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>Server status.</td>
+<td>Service state.</td>
 <td>Inline</td>
 </tr>
 </tbody>
 </table>
-<h3 id="get__state-responseschema">Response Schema</h3>
+<h3 id="getservicestate-responseschema">Response Schema</h3>
 <p>Status Code <strong>200</strong></p>
 <table>
 <thead>
@@ -2355,7 +2420,8 @@ fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2 id="put__category_-category-">put__category_{category}</h2>
+<h2 id="addcategories">addCategories</h2>
+<p><a id="opIdaddCategories"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -2384,7 +2450,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 </code></pre>
 <p><code>PUT /category/{category}</code></p>
 <p>insert a new category</p>
-<h3 id="put__category_-category--parameters">Parameters</h3>
+<h3 id="addcategories-parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2415,7 +2481,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
   <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
-<h3 id="put__category_-category--responses">Responses</h3>
+<h3 id="addcategories-responses">Responses</h3>
 <table>
 <thead>
 <tr>
