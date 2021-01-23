@@ -1580,7 +1580,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#addcategories" class="toc-h2 toc-link" data-title="">addCategories</a>
+                    <a href="#addcategory" class="toc-h2 toc-link" data-title="">addCategory</a>
                     
                   </li>
                 
@@ -1590,12 +1590,12 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#delete__category_-category-" class="toc-h2 toc-link" data-title="">delete__category_{category}</a>
+                    <a href="#deletecategory" class="toc-h2 toc-link" data-title="">deleteCategory</a>
                     
                   </li>
                 
                   <li>
-                    <a href="#get__category_-category-_value" class="toc-h2 toc-link" data-title="">get__category_{category}_value</a>
+                    <a href="#getcategoryvalues" class="toc-h2 toc-link" data-title="">getCategoryValues</a>
                     
                   </li>
                 
@@ -2420,8 +2420,8 @@ fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2 id="addcategories">addCategories</h2>
-<p><a id="opIdaddCategories"></a></p>
+<h2 id="addcategory">addCategory</h2>
+<p><a id="opIdaddCategory"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -2449,8 +2449,8 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 
 </code></pre>
 <p><code>PUT /category/{category}</code></p>
-<p>insert a new category</p>
-<h3 id="addcategories-parameters">Parameters</h3>
+<p>Add a new category.</p>
+<h3 id="addcategory-parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2481,7 +2481,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
   <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
-<h3 id="addcategories-responses">Responses</h3>
+<h3 id="addcategory-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -2561,7 +2561,8 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2 id="delete__category_-category-">delete__category_{category}</h2>
+<h2 id="deletecategory">deleteCategory</h2>
+<p><a id="opIddeleteCategory"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -2590,7 +2591,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 </code></pre>
 <p><code>DELETE /category/{category}</code></p>
 <p>Delete a category.</p>
-<h3 id="delete__category_-category--parameters">Parameters</h3>
+<h3 id="deletecategory-parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2621,7 +2622,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
   <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
-<h3 id="delete__category_-category--responses">Responses</h3>
+<h3 id="deletecategory-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -2649,7 +2650,8 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2 id="get__category_-category-_value">get__category_{category}_value</h2>
+<h2 id="getcategoryvalues">getCategoryValues</h2>
+<p><a id="opIdgetCategoryValues"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -2678,7 +2680,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 </code></pre>
 <p><code>GET /category/{category}/value</code></p>
 <p>List values of a category.</p>
-<h3 id="get__category_-category-_value-parameters">Parameters</h3>
+<h3 id="getcategoryvalues-parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2716,7 +2718,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
   {}
 ]
 </code></pre>
-<h3 id="get__category_-category-_value-responses">Responses</h3>
+<h3 id="getcategoryvalues-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -2741,7 +2743,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 </tr>
 </tbody>
 </table>
-<h3 id="get__category_-category-_value-responseschema">Response Schema</h3>
+<h3 id="getcategoryvalues-responseschema">Response Schema</h3>
 <p>Status Code <strong>200</strong></p>
 <table>
 <thead>
