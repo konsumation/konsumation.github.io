@@ -1525,12 +1525,12 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
               <ul class="toc-list-h2">
                 
                   <li>
-                    <a href="#stopkonsumserver" class="toc-h2 toc-link" data-title="">stopKonsumServer</a>
+                    <a href="#stopserver" class="toc-h2 toc-link" data-title="">stopServer</a>
                     
                   </li>
                 
                   <li>
-                    <a href="#reloadkonsumconfig" class="toc-h2 toc-link" data-title="">reloadKonsumConfig</a>
+                    <a href="#reloadconfig" class="toc-h2 toc-link" data-title="">reloadConfig</a>
                     
                   </li>
                 
@@ -1722,8 +1722,8 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
 <li>HTTP Authentication, scheme: bearer</li>
 </ul>
 <h1 id="collect-resource-usage-in-a-home-environment-default">Default</h1>
-<h2 id="stopkonsumserver">stopKonsumServer</h2>
-<p><a id="opIdstopKonsumServer"></a></p>
+<h2 id="stopserver">stopServer</h2>
+<p><a id="opIdstopServer"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -1758,7 +1758,7 @@ fetch(<span class="hljs-string">&#x27;/admin/stop&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<h3 id="stopkonsumserver-responses">Responses</h3>
+<h3 id="stopserver-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -1780,8 +1780,8 @@ fetch(<span class="hljs-string">&#x27;/admin/stop&#x27;</span>,
 <aside class="success">
 This operation does not require authentication
 </aside>
-<h2 id="reloadkonsumconfig">reloadKonsumConfig</h2>
-<p><a id="opIdreloadKonsumConfig"></a></p>
+<h2 id="reloadconfig">reloadConfig</h2>
+<p><a id="opIdreloadConfig"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
@@ -1816,7 +1816,7 @@ fetch(<span class="hljs-string">&#x27;/admin/reload&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<h3 id="reloadkonsumconfig-responses">Responses</h3>
+<h3 id="reloadconfig-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -2165,7 +2165,10 @@ fetch(<span class="hljs-string">&#x27;/authenticate&#x27;</span>,
 </blockquote>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
 <blockquote>
@@ -3923,7 +3926,10 @@ This operation does not require authentication
 <a id="tocsauthresponse"></a></p>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 
 </code></pre>
@@ -3947,7 +3953,28 @@ This operation does not require authentication
 <td>none</td>
 </tr>
 <tr>
+<td>token_type</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
 <td>refresh_token</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>scope</td>
 <td>string</td>
 <td>false</td>
 <td>none</td>
