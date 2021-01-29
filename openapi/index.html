@@ -2167,7 +2167,7 @@ fetch(<span class="hljs-string">&#x27;/authenticate&#x27;</span>,
   <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;expires&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
@@ -3928,7 +3928,7 @@ This operation does not require authentication
   <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;expires&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 
@@ -3957,7 +3957,7 @@ This operation does not require authentication
 <td>string</td>
 <td>false</td>
 <td>none</td>
-<td>none</td>
+<td>Type of the token.</td>
 </tr>
 <tr>
 <td>refresh_token</td>
@@ -3967,11 +3967,11 @@ This operation does not require authentication
 <td>none</td>
 </tr>
 <tr>
-<td>expires_in</td>
-<td>string</td>
+<td>expires</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
-<td>none</td>
+<td>Number of seconds the access token is valid.</td>
 </tr>
 <tr>
 <td>scope</td>
