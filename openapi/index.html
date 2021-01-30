@@ -1644,6 +1644,11 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                     
                   </li>
                 
+                  <li>
+                    <a href="#url_externaldocs" class="toc-h2 toc-link" data-title="">url_externalDocs</a>
+                    
+                  </li>
+                
               </ul>
             
           </li>
@@ -2167,7 +2172,7 @@ fetch(<span class="hljs-string">&#x27;/authenticate&#x27;</span>,
   <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;expires&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
@@ -3710,6 +3715,43 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note/{note}&#x27;</sp
 <aside class="success">
 This operation does not require authentication
 </aside>
+<h2 id="url_externaldocs">url_externalDocs</h2>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
+curl -X URL /externalDocs
+
+</code></pre>
+<pre class="highlight tab tab-javascript"><code>
+fetch(<span class="hljs-string">&#x27;/externalDocs&#x27;</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;URL&#x27;</span>
+
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>URL externalDocs</code></p>
+<h3 id="url_externaldocs-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
 <h1 id="schemas">Schemas</h1>
 <h2 id="tocs_category">Category</h2>
 <p><a id="schemacategory"></a>
@@ -3928,7 +3970,7 @@ This operation does not require authentication
   <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;expires&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 
@@ -3950,14 +3992,14 @@ This operation does not require authentication
 <td>string</td>
 <td>false</td>
 <td>none</td>
-<td>none</td>
+<td>The access token issued.</td>
 </tr>
 <tr>
 <td>token_type</td>
 <td>string</td>
 <td>false</td>
 <td>none</td>
-<td>Type of the token.</td>
+<td>The type of the token issued. Value is case insensitive.</td>
 </tr>
 <tr>
 <td>refresh_token</td>
@@ -3967,11 +4009,11 @@ This operation does not require authentication
 <td>none</td>
 </tr>
 <tr>
-<td>expires</td>
+<td>expires_in</td>
 <td>integer</td>
 <td>false</td>
 <td>none</td>
-<td>Number of seconds the access token is valid.</td>
+<td>The lifetime in seconds of the access token. For example, the value &quot;3600&quot; denotes that the access token will expire in one hour from the time the response was generated.</td>
 </tr>
 <tr>
 <td>scope</td>
