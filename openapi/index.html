@@ -1550,26 +1550,6 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#tags__authenticate" class="toc-h2 toc-link" data-title="">tags__authenticate</a>
-                    
-                  </li>
-                
-                  <li>
-                    <a href="#authenticate" class="toc-h2 toc-link" data-title="">authenticate</a>
-                    
-                  </li>
-                
-                  <li>
-                    <a href="#tags__category" class="toc-h2 toc-link" data-title="">tags__category</a>
-                    
-                  </li>
-                
-                  <li>
-                    <a href="#getcategories" class="toc-h2 toc-link" data-title="">getCategories</a>
-                    
-                  </li>
-                
-                  <li>
                     <a href="#addcategory" class="toc-h2 toc-link" data-title="">addCategory</a>
                     
                   </li>
@@ -1636,6 +1616,34 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                 
                   <li>
                     <a href="#url_externaldocs" class="toc-h2 toc-link" data-title="">url_externalDocs</a>
+                    
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
+            <a href="#collect-resource-usage-in-a-home-environment-authenticate" class="toc-h1 toc-link" data-title="authenticate">authenticate</a>
+            
+              <ul class="toc-list-h2">
+                
+                  <li>
+                    <a href="#authenticate" class="toc-h2 toc-link" data-title="">authenticate</a>
+                    
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
+            <a href="#collect-resource-usage-in-a-home-environment-category" class="toc-h1 toc-link" data-title="category">category</a>
+            
+              <ul class="toc-list-h2">
+                
+                  <li>
+                    <a href="#getcategories" class="toc-h2 toc-link" data-title="">getCategories</a>
                     
                   </li>
                 
@@ -2062,301 +2070,6 @@ fetch(<span class="hljs-string">&#x27;/state&#x27;</span>,
 </table>
 <aside class="success">
 This operation does not require authentication
-</aside>
-<h2 id="tags__authenticate">tags__authenticate</h2>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X TAGS /authenticate
-
-</code></pre>
-<pre class="highlight tab tab-javascript"><code>
-fetch(<span class="hljs-string">&#x27;/authenticate&#x27;</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;TAGS&#x27;</span>
-
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>TAGS /authenticate</code></p>
-<h3 id="tags__authenticate-responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-<aside class="success">
-This operation does not require authentication
-</aside>
-<h2 id="authenticate">authenticate</h2>
-<p><a id="opIdauthenticate"></a></p>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST /authenticate \
-  -H <span class="hljs-string">&#x27;Content-Type: application/json&#x27;</span> \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
-
-</code></pre>
-<pre class="highlight tab tab-javascript"><code><span class="hljs-keyword">const</span> inputBody = <span class="hljs-string">&#x27;{
-  &quot;username&quot;: &quot;string&quot;,
-  &quot;password&quot;: &quot;string&quot;
-}&#x27;</span>;
-<span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Content-Type&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
-};
-
-fetch(<span class="hljs-string">&#x27;/authenticate&#x27;</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;POST&#x27;</span>,
-  <span class="hljs-attr">body</span>: inputBody,
-  <span class="hljs-attr">headers</span>: headers
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>POST /authenticate</code></p>
-<p>Login to request api token.</p>
-<blockquote>
-<p>Body parameter</p>
-</blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
-<h3 id="authenticate-parameters">Parameters</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>body</td>
-<td>body</td>
-<td><a href="#schemaauthrequest">AuthRequest</a></td>
-<td>true</td>
-<td>none</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Example responses</p>
-</blockquote>
-<blockquote>
-<p>200 Response</p>
-</blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
-<blockquote>
-<p>401 Response</p>
-</blockquote>
-<h3 id="authenticate-responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>Token generated.</td>
-<td><a href="#schemaauthresponse">AuthResponse</a></td>
-</tr>
-<tr>
-<td>401</td>
-<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
-<td>Authentication failed.</td>
-<td><a href="#schematextonlymessage">TextOnlyMessage</a></td>
-</tr>
-</tbody>
-</table>
-<aside class="success">
-This operation does not require authentication
-</aside>
-<h2 id="tags__category">tags__category</h2>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X TAGS /category
-
-</code></pre>
-<pre class="highlight tab tab-javascript"><code>
-fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;TAGS&#x27;</span>
-
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>TAGS /category</code></p>
-<h3 id="tags__category-responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-<aside class="success">
-This operation does not require authentication
-</aside>
-<h2 id="getcategories">getCategories</h2>
-<p><a id="opIdgetCategories"></a></p>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET /category \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
-  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
-
-</code></pre>
-<pre class="highlight tab tab-javascript"><code>
-<span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
-  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
-};
-
-fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;GET&#x27;</span>,
-
-  <span class="hljs-attr">headers</span>: headers
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>GET /category</code></p>
-<p><em>Retrieve list of categories.</em></p>
-<blockquote>
-<p>Example responses</p>
-</blockquote>
-<blockquote>
-<p>200 Response</p>
-</blockquote>
-<pre class="highlight tab tab-json"><code>[
-  {
-    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;EV&quot;</span>,
-    <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;mains power&quot;</span>,
-    <span class="hljs-attr">&quot;unit&quot;</span>: <span class="hljs-string">&quot;m3&quot;</span>
-  }
-]
-</code></pre>
-<h3 id="getcategories-responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>A list of categories.</td>
-<td>Inline</td>
-</tr>
-</tbody>
-</table>
-<h3 id="getcategories-responseschema">Response Schema</h3>
-<p>Status Code <strong>200</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Restrictions</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>anonymous</em></td>
-<td>[<a href="#schemacategory">Category</a>]</td>
-<td>false</td>
-<td>none</td>
-<td>none</td>
-</tr>
-<tr>
-<td>» id</td>
-<td>string</td>
-<td>true</td>
-<td>none</td>
-<td>The id of the category.</td>
-</tr>
-<tr>
-<td>» description</td>
-<td>string</td>
-<td>false</td>
-<td>none</td>
-<td>The human readable description of your category.</td>
-</tr>
-<tr>
-<td>» unit</td>
-<td>string</td>
-<td>false</td>
-<td>none</td>
-<td>The physical measurment unit.</td>
-</tr>
-</tbody>
-</table>
-<aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-konsum_auth ( Scopes: konsum.category )
 </aside>
 <h2 id="addcategory">addCategory</h2>
 <p><a id="opIdaddCategory"></a></p>
@@ -3700,6 +3413,229 @@ fetch(<span class="hljs-string">&#x27;/externalDocs&#x27;</span>,
 </table>
 <aside class="success">
 This operation does not require authentication
+</aside>
+<h1 id="collect-resource-usage-in-a-home-environment-authenticate">authenticate</h1>
+<h2 id="authenticate">authenticate</h2>
+<p><a id="opIdauthenticate"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
+curl -X POST /authenticate \
+  -H <span class="hljs-string">&#x27;Content-Type: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
+
+</code></pre>
+<pre class="highlight tab tab-javascript"><code><span class="hljs-keyword">const</span> inputBody = <span class="hljs-string">&#x27;{
+  &quot;username&quot;: &quot;string&quot;,
+  &quot;password&quot;: &quot;string&quot;
+}&#x27;</span>;
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">&#x27;Content-Type&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
+};
+
+fetch(<span class="hljs-string">&#x27;/authenticate&#x27;</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;POST&#x27;</span>,
+  <span class="hljs-attr">body</span>: inputBody,
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>POST /authenticate</code></p>
+<p>Login to request api token.</p>
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre>
+<h3 id="authenticate-parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemaauthrequest">AuthRequest</a></td>
+<td>true</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;refresh_token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;expires_in&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre>
+<blockquote>
+<p>401 Response</p>
+</blockquote>
+<h3 id="authenticate-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Token generated.</td>
+<td><a href="#schemaauthresponse">AuthResponse</a></td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Authentication failed.</td>
+<td><a href="#schematextonlymessage">TextOnlyMessage</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h1 id="collect-resource-usage-in-a-home-environment-category">category</h1>
+<h2 id="getcategories">getCategories</h2>
+<p><a id="opIdgetCategories"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
+curl -X GET /category \
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
+
+</code></pre>
+<pre class="highlight tab tab-javascript"><code>
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
+};
+
+fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
+{
+  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;GET&#x27;</span>,
+
+  <span class="hljs-attr">headers</span>: headers
+})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">return</span> res.json();
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(body);
+});
+
+</code></pre>
+<p><code>GET /category</code></p>
+<p><em>Retrieve list of categories.</em></p>
+<blockquote>
+<p>Example responses</p>
+</blockquote>
+<blockquote>
+<p>200 Response</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>[
+  {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;EV&quot;</span>,
+    <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;mains power&quot;</span>,
+    <span class="hljs-attr">&quot;unit&quot;</span>: <span class="hljs-string">&quot;m3&quot;</span>
+  }
+]
+</code></pre>
+<h3 id="getcategories-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>A list of categories.</td>
+<td>Inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getcategories-responseschema">Response Schema</h3>
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>[<a href="#schemacategory">Category</a>]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>» id</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The id of the category.</td>
+</tr>
+<tr>
+<td>» description</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The human readable description of your category.</td>
+</tr>
+<tr>
+<td>» unit</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The physical measurment unit.</td>
+</tr>
+</tbody>
+</table>
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+konsum_auth ( Scopes: konsum.category )
 </aside>
 <h1 id="schemas">Schemas</h1>
 <h2 id="tocs_category">Category</h2>
