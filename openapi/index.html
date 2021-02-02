@@ -1614,11 +1614,6 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                     
                   </li>
                 
-                  <li>
-                    <a href="#url_externaldocs" class="toc-h2 toc-link" data-title="">url_externalDocs</a>
-                    
-                  </li>
-                
               </ul>
             
           </li>
@@ -2008,6 +2003,7 @@ fetch(<span class="hljs-string">&#x27;/state&#x27;</span>,
 <pre class="highlight tab tab-json"><code>[
   {
     <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;database&quot;</span>: {},
     <span class="hljs-attr">&quot;uptime&quot;</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">&quot;memory&quot;</span>: {}
   }
@@ -2051,6 +2047,13 @@ fetch(<span class="hljs-string">&#x27;/state&#x27;</span>,
 <td>false</td>
 <td>none</td>
 <td>The software version of the server.</td>
+</tr>
+<tr>
+<td>» database</td>
+<td>object</td>
+<td>false</td>
+<td>none</td>
+<td>details of the database.</td>
 </tr>
 <tr>
 <td>» uptime</td>
@@ -3377,43 +3380,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note/{note}&#x27;</sp
 To perform this operation, you must be authenticated by means of one of the following methods:
 konsum_auth ( Scopes: konsum.note.delete )
 </aside>
-<h2 id="url_externaldocs">url_externalDocs</h2>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X URL /externalDocs
-
-</code></pre>
-<pre class="highlight tab tab-javascript"><code>
-fetch(<span class="hljs-string">&#x27;/externalDocs&#x27;</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;URL&#x27;</span>
-
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>URL externalDocs</code></p>
-<h3 id="url_externaldocs-responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-<aside class="success">
-This operation does not require authentication
-</aside>
 <h1 id="collect-resource-usage-in-a-home-environment-authenticate">authenticate</h1>
 <h2 id="authenticate">authenticate</h2>
 <p><a id="opIdauthenticate"></a></p>
@@ -3767,6 +3733,7 @@ konsum_auth ( Scopes: konsum.category )
 <a id="tocsstate"></a></p>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;database&quot;</span>: {},
   <span class="hljs-attr">&quot;uptime&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">&quot;memory&quot;</span>: {}
 }
@@ -3790,6 +3757,13 @@ konsum_auth ( Scopes: konsum.category )
 <td>false</td>
 <td>none</td>
 <td>The software version of the server.</td>
+</tr>
+<tr>
+<td>database</td>
+<td>object</td>
+<td>false</td>
+<td>none</td>
+<td>details of the database.</td>
 </tr>
 <tr>
 <td>uptime</td>
