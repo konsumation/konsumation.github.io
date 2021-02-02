@@ -1570,17 +1570,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#security__category" class="toc-h2 toc-link" data-title="">security__category</a>
-                    
-                  </li>
-                
-                  <li>
                     <a href="#addcategory" class="toc-h2 toc-link" data-title="">addCategory</a>
-                    
-                  </li>
-                
-                  <li>
-                    <a href="#security__category_-category-" class="toc-h2 toc-link" data-title="">security__category_{category}</a>
                     
                   </li>
                 
@@ -2251,12 +2241,14 @@ This operation does not require authentication
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X GET /category \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
 fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
@@ -2350,45 +2342,9 @@ fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
 </tr>
 </tbody>
 </table>
-<aside class="success">
-This operation does not require authentication
-</aside>
-<h2 id="security__category">security__category</h2>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X SECURITY /category
-
-</code></pre>
-<pre class="highlight tab tab-javascript"><code>
-fetch(<span class="hljs-string">&#x27;/category&#x27;</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;SECURITY&#x27;</span>
-
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>SECURITY /category</code></p>
-<h3 id="security__category-responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-<aside class="success">
-This operation does not require authentication
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+konsum_auth ( Scopes: konsum.category )
 </aside>
 <h2 id="addcategory">addCategory</h2>
 <p><a id="opIdaddCategory"></a></p>
@@ -2397,12 +2353,14 @@ This operation does not require authentication
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X PUT /category/{category} \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
 fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
@@ -2470,66 +2428,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 </tr>
 </tbody>
 </table>
-<aside class="success">
-This operation does not require authentication
-</aside>
-<h2 id="security__category_-category-">security__category_{category}</h2>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X SECURITY /category/{category}
-
-</code></pre>
-<pre class="highlight tab tab-javascript"><code>
-fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;SECURITY&#x27;</span>
-
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>SECURITY /category/{category}</code></p>
-<h3 id="security__category_-category--parameters">Parameters</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>category</td>
-<td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="security__category_-category--responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-<aside class="success">
-This operation does not require authentication
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+konsum_auth ( Scopes: konsum.category.add )
 </aside>
 <h2 id="deletecategory">deleteCategory</h2>
 <p><a id="opIddeleteCategory"></a></p>
@@ -2538,12 +2439,14 @@ This operation does not require authentication
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X DELETE /category/{category} \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
 fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
@@ -2617,8 +2520,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 </tr>
 </tbody>
 </table>
-<aside class="success">
-This operation does not require authentication
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+konsum_auth ( Scopes: konsum.category.delete )
 </aside>
 <h2 id="getcategoryvalues">getCategoryValues</h2>
 <p><a id="opIdgetCategoryValues"></a></p>
@@ -2627,12 +2531,14 @@ This operation does not require authentication
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X GET /category/{category}/value \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
 fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
@@ -2735,8 +2641,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 </tr>
 </tbody>
 </table>
-<aside class="success">
-This operation does not require authentication
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+konsum_auth ( Scopes: konsum.value )
 </aside>
 <h2 id="insertcategoryvalues">insertCategoryValues</h2>
 <p><a id="opIdinsertCategoryValues"></a></p>
@@ -2745,12 +2652,14 @@ This operation does not require authentication
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X POST /category/{category}/value \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
 fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
@@ -2825,8 +2734,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 </tr>
 </tbody>
 </table>
-<aside class="success">
-This operation does not require authentication
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+konsum_auth ( Scopes: konsum.value.add )
 </aside>
 <h2 id="deletecategoryvalues">deleteCategoryValues</h2>
 <p><a id="opIddeleteCategoryValues"></a></p>
@@ -2835,12 +2745,14 @@ This operation does not require authentication
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X DELETE /category/{category}/value \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span>
+  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
 fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
@@ -2915,8 +2827,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 </tr>
 </tbody>
 </table>
-<aside class="success">
-This operation does not require authentication
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+konsum_auth ( Scopes: konsum.value.delete )
 </aside>
 <h2 id="getcategorymeters">getCategoryMeters</h2>
 <p><a id="opIdgetCategoryMeters"></a></p>
