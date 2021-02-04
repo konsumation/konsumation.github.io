@@ -3063,6 +3063,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter&#x27;</span>,
   <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
+<blockquote>
+<p>404 Response</p>
+</blockquote>
 <h3 id="addcategorymeter-responses">Responses</h3>
 <table>
 <thead>
@@ -3099,13 +3102,13 @@ konsum_auth ( Scopes: konsum.meter.add )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X POST /category/{category}/meter \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -3158,10 +3161,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
 <h3 id="updatecategorymeter-responses">Responses</h3>
 <table>
 <thead>
@@ -3261,6 +3260,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter/{meter}&#x27;</
   <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
+<blockquote>
+<p>404 Response</p>
+</blockquote>
 <h3 id="deletecategorymeter-responses">Responses</h3>
 <table>
 <thead>
@@ -3419,13 +3421,13 @@ konsum_auth ( Scopes: konsum.note )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X PUT /category/{category}/note \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -3478,10 +3480,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
 <h3 id="addcategorynote-responses">Responses</h3>
 <table>
 <thead>
@@ -3518,13 +3516,13 @@ konsum_auth ( Scopes: konsum.note.add )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X POST /category/{category}/note \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -3577,10 +3575,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
 <h3 id="updatecategorynote-responses">Responses</h3>
 <table>
 <thead>
@@ -3680,6 +3674,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note/{note}&#x27;</sp
   <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
+<blockquote>
+<p>404 Response</p>
+</blockquote>
 <h3 id="deletecategorynote-responses">Responses</h3>
 <table>
 <thead>
