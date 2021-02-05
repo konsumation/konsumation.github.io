@@ -2359,13 +2359,13 @@ konsum_auth ( Scopes: konsum.category )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X PUT /category/{category} \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -2411,10 +2411,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
 <h3 id="addcategory-responses">Responses</h3>
 <table>
 <thead>
@@ -2445,13 +2441,13 @@ konsum_auth ( Scopes: konsum.category.add )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X DELETE /category/{category} \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -2497,10 +2493,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
 <h3 id="deletecategory-responses">Responses</h3>
 <table>
 <thead>
@@ -2595,7 +2587,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 ]
 </code></pre>
 <blockquote>
-<p>406 Response</p>
+<p>404 Response</p>
 </blockquote>
 <h3 id="getcategoryvalues-responses">Responses</h3>
 <table>
@@ -2661,13 +2653,13 @@ konsum_auth ( Scopes: konsum.value )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X POST /category/{category}/value \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -2713,10 +2705,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
 <h3 id="insertcategoryvalues-responses">Responses</h3>
 <table>
 <thead>
@@ -2753,13 +2741,13 @@ konsum_auth ( Scopes: konsum.value.add )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X DELETE /category/{category}/value \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -2805,10 +2793,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 <blockquote>
 <p>200 Response</p>
 </blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
 <h3 id="deletecategoryvalues-responses">Responses</h3>
 <table>
 <thead>
@@ -2914,6 +2898,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter&#x27;</span>,
   }
 ]
 </code></pre>
+<blockquote>
+<p>404 Response</p>
+</blockquote>
 <h3 id="getcategorymeters-responses">Responses</h3>
 <table>
 <thead>
@@ -3000,13 +2987,13 @@ konsum_auth ( Scopes: konsum.meter )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X PUT /category/{category}/meter \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -3058,13 +3045,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter&#x27;</span>,
 </blockquote>
 <blockquote>
 <p>200 Response</p>
-</blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
-<blockquote>
-<p>404 Response</p>
 </blockquote>
 <h3 id="addcategorymeter-responses">Responses</h3>
 <table>
@@ -3197,13 +3177,13 @@ konsum_auth ( Scopes: konsum.meter.modify )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X DELETE /category/{category}/meter/{meter} \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -3255,13 +3235,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter/{meter}&#x27;</
 </blockquote>
 <blockquote>
 <p>200 Response</p>
-</blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
-<blockquote>
-<p>404 Response</p>
 </blockquote>
 <h3 id="deletecategorymeter-responses">Responses</h3>
 <table>
@@ -3363,6 +3336,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note&#x27;</span>,
   {}
 ]
 </code></pre>
+<blockquote>
+<p>404 Response</p>
+</blockquote>
 <h3 id="getcategorynotes-responses">Responses</h3>
 <table>
 <thead>
@@ -3611,13 +3587,13 @@ konsum_auth ( Scopes: konsum.note.modify )
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
 curl -X DELETE /category/{category}/note/{note} \
-  -H <span class="hljs-string">&#x27;Accept: application/json&#x27;</span> \
+  -H <span class="hljs-string">&#x27;Accept: application/text&#x27;</span> \
   -H <span class="hljs-string">&#x27;Authorization: Bearer {access-token}&#x27;</span>
 
 </code></pre>
 <pre class="highlight tab tab-javascript"><code>
 <span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/json&#x27;</span>,
+  <span class="hljs-string">&#x27;Accept&#x27;</span>:<span class="hljs-string">&#x27;application/text&#x27;</span>,
   <span class="hljs-string">&#x27;Authorization&#x27;</span>:<span class="hljs-string">&#x27;Bearer {access-token}&#x27;</span>
 };
 
@@ -3669,13 +3645,6 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note/{note}&#x27;</sp
 </blockquote>
 <blockquote>
 <p>200 Response</p>
-</blockquote>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre>
-<blockquote>
-<p>404 Response</p>
 </blockquote>
 <h3 id="deletecategorynote-responses">Responses</h3>
 <table>
