@@ -1476,6 +1476,9 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
   </head>
 
   <body data-languages="[&quot;shell&quot;,&quot;javascript&quot;]">
@@ -1688,12 +1691,27 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
               <ul class="toc-list-h2">
                 
                   <li>
+                    <a href="#tocs_categoryid" class="toc-h2 toc-link" data-title="">CategoryID</a>
+                    
+                  </li>
+                
+                  <li>
                     <a href="#tocs_category" class="toc-h2 toc-link" data-title="">Category</a>
                     
                   </li>
                 
                   <li>
+                    <a href="#tocs_meterid" class="toc-h2 toc-link" data-title="">MeterID</a>
+                    
+                  </li>
+                
+                  <li>
                     <a href="#tocs_meter" class="toc-h2 toc-link" data-title="">Meter</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#tocs_noteid" class="toc-h2 toc-link" data-title="">NoteID</a>
                     
                   </li>
                 
@@ -2381,9 +2399,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -2467,9 +2485,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -2560,16 +2578,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
-</tr>
-<tr>
-<td>time</td>
-<td>body</td>
-<td>string</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
 <td>true</td>
-<td>Time the value was present.</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -2583,6 +2594,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
   {}
 ]
 </code></pre>
+<blockquote>
+<p>406 Response</p>
+</blockquote>
 <h3 id="getcategoryvalues-responses">Responses</h3>
 <table>
 <thead>
@@ -2610,7 +2624,7 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 <td>406</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.6">Not Acceptable</a></td>
 <td>Unsupported content-type.</td>
-<td>None</td>
+<td><a href="#schemamessage">Message</a></td>
 </tr>
 </tbody>
 </table>
@@ -2687,16 +2701,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
-</tr>
-<tr>
-<td>time</td>
-<td>body</td>
-<td>string</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
 <td>true</td>
-<td>Time the value was present.</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -2786,16 +2793,9 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/value&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
-</tr>
-<tr>
-<td>time</td>
-<td>body</td>
-<td>string</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
 <td>true</td>
-<td>Time the value was present.</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -2886,16 +2886,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
 <td>meter</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Meter identifier.</td>
+<td><a href="#schemameterid">MeterID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3040,16 +3040,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
 <td>meter</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Meter identifier.</td>
+<td><a href="#schemameterid">MeterID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3142,16 +3142,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
 <td>meter</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Meter identifier.</td>
+<td><a href="#schemameterid">MeterID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3237,16 +3237,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/meter/{meter}&#x27;</
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
-<td>meter</td>
+<td>note</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Meter identifier.</td>
+<td><a href="#schemanoteid">NoteID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3340,16 +3340,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
 <td>note</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Note identifier.</td>
+<td><a href="#schemanoteid">NoteID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3461,16 +3461,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
 <td>note</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Note identifier.</td>
+<td><a href="#schemanoteid">NoteID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3556,16 +3556,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note&#x27;</span>,
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
 <td>note</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Note identifier.</td>
+<td><a href="#schemanoteid">NoteID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3651,16 +3651,16 @@ fetch(<span class="hljs-string">&#x27;/category/{category}/note/{note}&#x27;</sp
 <tr>
 <td>category</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Category identifier.</td>
+<td><a href="#schemacategoryid">CategoryID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 <tr>
 <td>note</td>
 <td>path</td>
-<td>string</td>
-<td>false</td>
-<td>Note identifier.</td>
+<td><a href="#schemanoteid">NoteID</a></td>
+<td>true</td>
+<td>none</td>
 </tr>
 </tbody>
 </table>
@@ -3707,6 +3707,36 @@ To perform this operation, you must be authenticated by means of one of the foll
 konsum_auth ( Scopes: konsum.note.delete )
 </aside>
 <h1 id="schemas">Schemas</h1>
+<h2 id="tocs_categoryid">CategoryID</h2>
+<p><a id="schemacategoryid"></a>
+<a id="schema_CategoryID"></a>
+<a id="tocScategoryid"></a>
+<a id="tocscategoryid"></a></p>
+<pre class="highlight tab tab-json"><code><span class="hljs-string">&quot;string&quot;</span>
+
+</code></pre>
+<p>Category identifier.</p>
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Category identifier.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="tocs_category">Category</h2>
 <p><a id="schemacategory"></a>
 <a id="schema_Category"></a>
@@ -3719,7 +3749,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 }
 
 </code></pre>
-<h3 id="properties">Properties</h3>
+<h3 id="properties-2">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -3754,6 +3784,36 @@ konsum_auth ( Scopes: konsum.note.delete )
 </tr>
 </tbody>
 </table>
+<h2 id="tocs_meterid">MeterID</h2>
+<p><a id="schemameterid"></a>
+<a id="schema_MeterID"></a>
+<a id="tocSmeterid"></a>
+<a id="tocsmeterid"></a></p>
+<pre class="highlight tab tab-json"><code><span class="hljs-string">&quot;string&quot;</span>
+
+</code></pre>
+<p>Meter identifier.</p>
+<h3 id="properties-3">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Meter identifier.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="tocs_meter">Meter</h2>
 <p><a id="schemameter"></a>
 <a id="schema_Meter"></a>
@@ -3767,7 +3827,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 }
 
 </code></pre>
-<h3 id="properties-2">Properties</h3>
+<h3 id="properties-4">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -3809,6 +3869,36 @@ konsum_auth ( Scopes: konsum.note.delete )
 </tr>
 </tbody>
 </table>
+<h2 id="tocs_noteid">NoteID</h2>
+<p><a id="schemanoteid"></a>
+<a id="schema_NoteID"></a>
+<a id="tocSnoteid"></a>
+<a id="tocsnoteid"></a></p>
+<pre class="highlight tab tab-json"><code><span class="hljs-string">&quot;string&quot;</span>
+
+</code></pre>
+<p>Note identifier.</p>
+<h3 id="properties-5">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>anonymous</em></td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Note identifier.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="tocs_note">Note</h2>
 <p><a id="schemanote"></a>
 <a id="schema_Note"></a>
@@ -3817,7 +3907,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 <pre class="highlight tab tab-json"><code>{}
 
 </code></pre>
-<h3 id="properties-3">Properties</h3>
+<h3 id="properties-6">Properties</h3>
 <p><em>None</em></p>
 <h2 id="tocs_value">Value</h2>
 <p><a id="schemavalue"></a>
@@ -3827,7 +3917,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 <pre class="highlight tab tab-json"><code>{}
 
 </code></pre>
-<h3 id="properties-4">Properties</h3>
+<h3 id="properties-7">Properties</h3>
 <p><em>None</em></p>
 <h2 id="tocs_state">State</h2>
 <p><a id="schemastate"></a>
@@ -3842,7 +3932,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 }
 
 </code></pre>
-<h3 id="properties-5">Properties</h3>
+<h3 id="properties-8">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -3895,7 +3985,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 }
 
 </code></pre>
-<h3 id="properties-6">Properties</h3>
+<h3 id="properties-9">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -3910,14 +4000,14 @@ konsum_auth ( Scopes: konsum.note.delete )
 <tr>
 <td>username</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>none</td>
 </tr>
 <tr>
 <td>password</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>none</td>
 </tr>
@@ -3937,7 +4027,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 }
 
 </code></pre>
-<h3 id="properties-7">Properties</h3>
+<h3 id="properties-10">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -3952,14 +4042,14 @@ konsum_auth ( Scopes: konsum.note.delete )
 <tr>
 <td>access_token</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>The access token issued.</td>
 </tr>
 <tr>
 <td>token_type</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>The type of the token issued. Value is case insensitive.</td>
 </tr>
@@ -3996,7 +4086,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 }
 
 </code></pre>
-<h3 id="properties-8">Properties</h3>
+<h3 id="properties-11">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -4025,7 +4115,7 @@ konsum_auth ( Scopes: konsum.note.delete )
 <pre class="highlight tab tab-json"><code><span class="hljs-string">&quot;string&quot;</span>
 
 </code></pre>
-<h3 id="properties-9">Properties</h3>
+<h3 id="properties-12">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -4048,6 +4138,9 @@ konsum_auth ( Scopes: konsum.note.delete )
 </table>
 <!-- Renderer: Shins v2.6.0 -->
 <!-- Generator: Widdershins v4.0.1 -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->
