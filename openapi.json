@@ -104,7 +104,7 @@
     "/admin/backup": {
       "post": {
         "tags": ["admin"],
-        "summary": "create backup",
+        "summary": "create backup on server",
         "operationId": "backupDataOnServer",
         "description": "Create backup on server.",
         "responses": {
