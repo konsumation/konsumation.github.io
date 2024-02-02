@@ -1,0 +1,1002 @@
+{
+  "openapi": "3.0.3",
+  "servers": [
+    {
+      "url": "https://mydomain.com"
+    }
+  ],
+  "info": {
+    "title": "Collect resource usage in a home environment",
+    "version": "0.0.0-semantic-release",
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/konsumation/openapi/LICENSE"
+    }
+  },
+  "paths": {
+    "/admin/token": {
+      "post": {
+        "tags": ["admin"],
+        "summary": "create token",
+        "operationId": "createToken",
+        "description": "create token.",
+        "responses": {
+          "200": {
+            "description": "token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.admin.token"]
+          }
+        ]
+      }
+    },
+    "/admin/stop": {
+      "post": {
+        "tags": ["admin"],
+        "summary": "stop the service",
+        "operationId": "stopServer",
+        "description": "Stop konsum server.",
+        "responses": {
+          "200": {
+            "description": "Progress message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/TextOnlyMessage"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.admin.stop"]
+          }
+        ]
+      }
+    },
+    "/admin/reload": {
+      "post": {
+        "tags": ["admin"],
+        "summary": "reload config",
+        "operationId": "reloadConfig",
+        "description": "Reload konsum systemd config.",
+        "responses": {
+          "200": {
+            "description": "Progress message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/TextOnlyMessage"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.admin.reload"]
+          }
+        ]
+      }
+    },
+    "/admin/backup": {
+      "post": {
+        "tags": ["admin"],
+        "summary": "create backup",
+        "operationId": "backupDataOnServer",
+        "description": "Create backup on server.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/TextOnlyMessage"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.admin.backup"]
+          }
+        ]
+      },
+      "get": {
+        "tags": ["admin"],
+        "summary": "create backup",
+        "operationId": "backupData",
+        "description": "Create backup.",
+        "responses": {
+          "200": {
+            "description": "Backup data as text.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/TextOnlyMessage"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.admin.backup"]
+          }
+        ]
+      }
+    },
+    "/state": {
+      "get": {
+        "summary": "service status report",
+        "operationId": "getServiceState",
+        "description": "Retrieve service state.",
+        "responses": {
+          "200": {
+            "description": "Service state.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/State"
+                  }
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "security": []
+      }
+    },
+    "/authenticate": {
+      "post": {
+        "tags": ["authenticate"],
+        "summary": "user login",
+        "operationId": "authenticate",
+        "description": "Login to request api token.",
+        "externalDocs": {
+          "description": "OAuth response",
+          "url": "https://tools.ietf.org/html/draft-ietf-oauth-v2-22#section-4.2.2"
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Token generated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          },
+          "401": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/TextOnlyMessage"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/category": {
+      "get": {
+        "tags": ["category"],
+        "operationId": "getCategories",
+        "summary": "Retrieve list of categories.",
+        "responses": {
+          "200": {
+            "description": "A list of categories.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.category"]
+          }
+        ]
+      }
+    },
+    "/category/{category}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        }
+      ],
+      "put": {
+        "tags": ["category"],
+        "summary": "add category",
+        "operationId": "addCategory",
+        "description": "Add a new category.",
+        "responses": {
+          "200": {
+            "description": "success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.category.add"]
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["category"],
+        "summary": "delete category",
+        "operationId": "deleteCategory",
+        "description": "Delete a category.",
+        "responses": {
+          "200": {
+            "description": "success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.category.delete"]
+          }
+        ]
+      }
+    },
+    "/category/{category}/value": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "description": "Limits the number of entries delivered.",
+          "required": false,
+          "schema": {
+            "type": "integer"
+          }
+        },
+        {
+          "name": "reverse",
+          "in": "query",
+          "description": "Reverses the order in which the entries are delivered.",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "get": {
+        "tags": ["value"],
+        "summary": "get values of a category",
+        "operationId": "getCategoryValues",
+        "description": "List values of a category.",
+        "responses": {
+          "200": {
+            "description": "Value list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Value"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Unsupported content-type.",
+            "content": {
+              "text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value"]
+          }
+        ]
+      },
+      "post": {
+        "tags": ["value"],
+        "summary": "add values to a category",
+        "operationId": "insertCategoryValues",
+        "description": "Insert a value into a category.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value.add"]
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["value"],
+        "summary": "delete values from a category",
+        "operationId": "deleteCategoryValues",
+        "description": "Delete a value from a category.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value.delete"]
+          }
+        ]
+      }
+    },
+    "/category/{category}/meter": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        }
+      ],
+      "get": {
+        "tags": ["meter"],
+        "summary": "list meters of a category",
+        "operationId": "getCategoryMeters",
+        "description": "List meters of a category.",
+        "responses": {
+          "200": {
+            "description": "List of meters.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Meter"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.meter"]
+          }
+        ]
+      },
+      "put": {
+        "tags": ["meter"],
+        "summary": "add a meter to a category",
+        "operationId": "addCategoryMeter",
+        "description": "Add a meter to a category.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.meter.add"]
+          }
+        ]
+      },
+      "post": {
+        "tags": ["meter"],
+        "summary": "update a meter of a category",
+        "operationId": "updateCategoryMeter",
+        "description": "Update a meter.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.meter.modify"]
+          }
+        ]
+      }
+    },
+    "/category/{category}/note": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        }
+      ],
+      "get": {
+        "tags": ["note"],
+        "summary": "list notes of a category",
+        "operationId": "getCategoryNotes",
+        "description": "List notes of a category.",
+        "responses": {
+          "200": {
+            "description": "List of notes.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Note"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note"]
+          }
+        ]
+      },
+      "put": {
+        "tags": ["note"],
+        "summary": "add a note to a category",
+        "operationId": "addCategoryNote",
+        "description": "add a note to a category.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note.add"]
+          }
+        ]
+      },
+      "post": {
+        "tags": ["note"],
+        "summary": "add a note of a category",
+        "operationId": "updateCategoryNote",
+        "description": "Update a note.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note.modify"]
+          }
+        ]
+      }
+    },
+    "/category/{category}/meter/{meter}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        },
+        {
+          "name": "meter",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/MeterID"
+          }
+        }
+      ],
+      "delete": {
+        "tags": ["meter"],
+        "summary": "delete a meter from a category",
+        "operationId": "deleteCategoryMeter",
+        "description": "Delete a meter.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.meter.delete"]
+          }
+        ]
+      }
+    },
+    "/category/{category}/note/{note}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        },
+        {
+          "name": "note",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/NoteID"
+          }
+        }
+      ],
+      "delete": {
+        "tags": ["note"],
+        "summary": "delete a note from a category",
+        "operationId": "deleteCategoryNote",
+        "description": "Delete a note.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note.delete"]
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "konsum_auth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "CategoryID": {
+        "description": "Category identifier.",
+        "type": "string"
+      },
+      "Category": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the category."
+          },
+          "description": {
+            "type": "string",
+            "description": "The human readable description of your category."
+          },
+          "unit": {
+            "type": "string",
+            "description": "The physical measurment unit."
+          }
+        },
+        "example": {
+          "id": "EV",
+          "description": "mains power",
+          "unit": "m3"
+        }
+      },
+      "MeterID": {
+        "description": "Meter identifier.",
+        "type": "string"
+      },
+      "Meter": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the meter."
+          },
+          "description": {
+            "type": "string",
+            "description": "The human readable description of your meter."
+          },
+          "unit": {
+            "type": "string",
+            "description": "The physical measurment unit."
+          },
+          "serial": {
+            "type": "string",
+            "description": "The serial number of the meter."
+          }
+        }
+      },
+      "NoteID": {
+        "description": "Note identifier.",
+        "type": "string"
+      },
+      "Note": {
+        "type": "object",
+        "required": ["id"]
+      },
+      "Value": {
+        "type": "object",
+        "required": ["id"]
+      },
+      "State": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "description": "The software version of the server."
+          },
+          "database": {
+            "type": "object",
+            "description": "details of the database."
+          },
+          "uptime": {
+            "type": "number",
+            "description": "The duration the sever is up and running."
+          },
+          "memory": {
+            "type": "object",
+            "description": "The memory usage of the server."
+          }
+        }
+      },
+      "AuthRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": ["username", "password"]
+      },
+      "AuthResponse": {
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "description": "The access token issued."
+          },
+          "token_type": {
+            "type": "string",
+            "description": "The type of the token issued. Value is case insensitive."
+          },
+          "refresh_token": {
+            "type": "string"
+          },
+          "expires_in": {
+            "type": "integer",
+            "description": "The lifetime in seconds of the access token. For example, the value \"3600\" denotes that the access token will expire in one hour from the time the response was generated."
+          },
+          "scope": {
+            "type": "string"
+          }
+        },
+        "required": ["token_type", "access_token"]
+      },
+      "Message": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "TextOnlyMessage": {
+        "type": "string"
+      },
+      "TokenResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "The access token issued."
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}
