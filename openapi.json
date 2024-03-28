@@ -609,7 +609,7 @@
         ]
       }
     },
-    "/category/{category}/note": {
+    "/category/{category}/meter/{meter}/note": {
       "parameters": [
         {
           "name": "category",
@@ -618,13 +618,21 @@
           "schema": {
             "$ref": "#/components/schemas/CategoryID"
           }
+        },
+        {
+          "name": "meter",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/MeterID"
+          }
         }
       ],
       "get": {
         "tags": ["note"],
-        "summary": "list notes of a category",
-        "operationId": "getCategoryNotes",
-        "description": "List notes of a category.",
+        "summary": "list notes of a meter",
+        "operationId": "getMeterNotes",
+        "description": "List notes of a meter.",
         "responses": {
           "200": {
             "description": "List of notes.",
@@ -643,7 +651,7 @@
             "description": "Unauthorized Request"
           },
           "404": {
-            "description": "No such category error message.",
+            "description": "No such category or meter error message.",
             "content": {
               "application/text": {
                 "schema": {
@@ -661,9 +669,9 @@
       },
       "put": {
         "tags": ["note"],
-        "summary": "add a note to a category",
-        "operationId": "addCategoryNote",
-        "description": "add a note to a category.",
+        "summary": "add a note to a meter",
+        "operationId": "addMeterNote",
+        "description": "add a note to a meter.",
         "responses": {
           "200": {
             "description": "Success message.",
@@ -679,7 +687,7 @@
             "description": "Unauthorized Request"
           },
           "404": {
-            "description": "No such category error message.",
+            "description": "No such category or meter error message.",
             "content": {
               "application/text": {
                 "schema": {
@@ -697,8 +705,8 @@
       },
       "post": {
         "tags": ["note"],
-        "summary": "add a note of a category",
-        "operationId": "updateCategoryNote",
+        "summary": "add a note of a meter",
+        "operationId": "updateNote",
         "description": "Update a note.",
         "responses": {
           "200": {
@@ -715,7 +723,7 @@
             "description": "Unauthorized Request"
           },
           "404": {
-            "description": "No such category error message.",
+            "description": "No such category or meter error message.",
             "content": {
               "application/text": {
                 "schema": {
@@ -788,7 +796,7 @@
         ]
       }
     },
-    "/category/{category}/note/{note}": {
+    "/category/{category}/meter/{meter}/note/{note}": {
       "parameters": [
         {
           "name": "category",
@@ -796,6 +804,14 @@
           "required": true,
           "schema": {
             "$ref": "#/components/schemas/CategoryID"
+          }
+        },
+        {
+          "name": "meter",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/MeterID"
           }
         },
         {
@@ -809,8 +825,8 @@
       ],
       "delete": {
         "tags": ["note"],
-        "summary": "delete a note from a category",
-        "operationId": "deleteCategoryNote",
+        "summary": "delete a note from a meter",
+        "operationId": "deleteMeterNote",
         "description": "Delete a note.",
         "responses": {
           "200": {
