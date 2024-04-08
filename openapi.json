@@ -609,6 +609,221 @@
         ]
       }
     },
+    "/category/{category}/meter/{meter}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        },
+        {
+          "name": "meter",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/MeterID"
+          }
+        }
+      ],
+      "delete": {
+        "tags": ["meter"],
+        "summary": "delete a meter from a category",
+        "operationId": "deleteCategoryMeter",
+        "description": "Delete a meter.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.meter.delete"]
+          }
+        ]
+      }
+    },
+    "/category/{category}/meter/{meter}/value": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        },
+        {
+          "name": "meter",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/MeterID"
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "description": "Limits the number of entries delivered.",
+          "required": false,
+          "schema": {
+            "type": "integer"
+          }
+        },
+        {
+          "name": "reverse",
+          "in": "query",
+          "description": "Reverses the order in which the entries are delivered.",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "get": {
+        "tags": ["value"],
+        "summary": "get values of a meter",
+        "operationId": "getMeterValues",
+        "description": "List values of a meter.",
+        "responses": {
+          "200": {
+            "description": "Value list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Value"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category or meter error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Unsupported content-type.",
+            "content": {
+              "text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value"]
+          }
+        ]
+      },
+      "post": {
+        "tags": ["value"],
+        "summary": "add values to a meter",
+        "operationId": "insertMeterValues",
+        "description": "Insert a value into a meter.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category or meter error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value.add"]
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["value"],
+        "summary": "delete values from a meter",
+        "operationId": "deleteMeterValues",
+        "description": "Delete a value from a meter.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category or meter error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value.delete"]
+          }
+        ]
+      }
+    },
     "/category/{category}/meter/{meter}/note": {
       "parameters": [
         {
@@ -736,62 +951,6 @@
         "security": [
           {
             "konsum_auth": ["konsum.note.modify"]
-          }
-        ]
-      }
-    },
-    "/category/{category}/meter/{meter}": {
-      "parameters": [
-        {
-          "name": "category",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/CategoryID"
-          }
-        },
-        {
-          "name": "meter",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/MeterID"
-          }
-        }
-      ],
-      "delete": {
-        "tags": ["meter"],
-        "summary": "delete a meter from a category",
-        "operationId": "deleteCategoryMeter",
-        "description": "Delete a meter.",
-        "responses": {
-          "200": {
-            "description": "Success message.",
-            "content": {
-              "application/text": {
-                "schema": {
-                  "$ref": "#/components/schemas/Message"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized Request"
-          },
-          "404": {
-            "description": "No such category error message.",
-            "content": {
-              "application/text": {
-                "schema": {
-                  "$ref": "#/components/schemas/Message"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "konsum_auth": ["konsum.meter.delete"]
           }
         ]
       }
