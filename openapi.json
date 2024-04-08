@@ -609,6 +609,185 @@
         ]
       }
     },
+    "/category/{category}/note": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        }
+      ],
+      "get": {
+        "tags": ["note"],
+        "summary": "list notes of a category",
+        "operationId": "getMeterNotes",
+        "description": "List notes of a category.",
+        "responses": {
+          "200": {
+            "description": "List of notes.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Note"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note"]
+          }
+        ]
+      },
+      "put": {
+        "tags": ["note"],
+        "summary": "add a note to a meter",
+        "operationId": "addMeterNote",
+        "description": "add a note to a meter.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category or meter error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note.add"]
+          }
+        ]
+      },
+      "post": {
+        "tags": ["note"],
+        "summary": "add a note of a meter",
+        "operationId": "updateNote",
+        "description": "Update a note.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category or meter error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note.modify"]
+          }
+        ]
+      }
+    },
+    "/category/{category}/note/{note}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryID"
+          }
+        },
+        {
+          "name": "note",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/NoteID"
+          }
+        }
+      ],
+      "delete": {
+        "tags": ["note"],
+        "summary": "delete a note from a category",
+        "operationId": "deleteCategoryNote",
+        "description": "Delete a note.",
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note.delete"]
+          }
+        ]
+      }
+    },
     "/category/{category}/meter/{meter}": {
       "parameters": [
         {
