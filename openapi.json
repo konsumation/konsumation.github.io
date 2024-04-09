@@ -1227,12 +1227,17 @@
           "unit": {
             "type": "string",
             "description": "The physical measurment unit."
+          },
+          "order": {
+            "type": "number",
+            "description": "sorting order higher nuber come first."
           }
         },
         "example": {
           "id": "EV",
           "description": "mains power",
-          "unit": "m3"
+          "unit": "m3",
+          "order": 1
         }
       },
       "MeterID": {
