@@ -322,7 +322,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -391,7 +391,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -437,7 +437,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -473,7 +473,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -524,7 +524,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -560,7 +560,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -596,7 +596,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -647,7 +647,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -683,7 +683,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -719,7 +719,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -775,7 +775,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -831,7 +831,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
               }
             }
@@ -908,7 +908,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -954,7 +954,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -990,7 +990,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -1049,7 +1049,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -1085,7 +1085,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -1121,7 +1121,7 @@
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -1181,11 +1181,11 @@
             "description": "Unauthorized Request"
           },
           "404": {
-            "description": "No such category error message.",
+            "description": "No such category or meter error message.",
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/Message"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
               }
             }
@@ -1336,6 +1336,30 @@
         "required": ["token_type", "access_token"]
       },
       "Message": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "NoSuchCategoryMessage": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "NoSuchCategoryOrMeterMessage": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "NoSuchMeterMessage": {
         "type": "object",
         "properties": {
           "message": {
