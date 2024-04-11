@@ -1238,7 +1238,7 @@
           }
         },
         "example": {
-          "id": "EV",
+          "name": "EV",
           "description": "mains power",
           "unit": "m3",
           "order": 1
@@ -1272,6 +1272,10 @@
             "type": "string",
             "description": "The serial number of the meter."
           }
+        },
+        "example": {
+          "name": "EV-2020",
+          "serial": "123"
         }
       },
       "NoteID": {
