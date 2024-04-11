@@ -268,7 +268,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         }
       ],
@@ -342,7 +342,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         },
         {
@@ -493,7 +493,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         }
       ],
@@ -616,7 +616,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         }
       ],
@@ -739,7 +739,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         },
         {
@@ -795,7 +795,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         },
         {
@@ -803,7 +803,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/MeterID"
+            "$ref": "#/components/schemas/MeterName"
           }
         }
       ],
@@ -851,7 +851,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         },
         {
@@ -859,7 +859,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/MeterID"
+            "$ref": "#/components/schemas/MeterName"
           }
         },
         {
@@ -1010,7 +1010,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         },
         {
@@ -1018,7 +1018,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/MeterID"
+            "$ref": "#/components/schemas/MeterName"
           }
         }
       ],
@@ -1141,7 +1141,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/CategoryID"
+            "$ref": "#/components/schemas/CategoryName"
           }
         },
         {
@@ -1149,7 +1149,7 @@
           "in": "path",
           "required": true,
           "schema": {
-            "$ref": "#/components/schemas/MeterID"
+            "$ref": "#/components/schemas/MeterName"
           }
         },
         {
@@ -1208,17 +1208,17 @@
       }
     },
     "schemas": {
-      "CategoryID": {
-        "description": "Category identifier.",
+      "CategoryName": {
+        "description": "Category name.",
         "type": "string"
       },
       "Category": {
         "type": "object",
-        "required": ["id"],
+        "required": ["name"],
         "properties": {
-          "id": {
+          "name": {
             "type": "string",
-            "description": "The id of the category."
+            "description": "The name of the category."
           },
           "description": {
             "type": "string",
@@ -1227,6 +1227,10 @@
           "unit": {
             "type": "string",
             "description": "The physical measurment unit."
+          },
+          "fractionalDigits": {
+            "type": "number",
+            "description": "decimal precission."
           },
           "order": {
             "type": "number",
@@ -1240,17 +1244,17 @@
           "order": 1
         }
       },
-      "MeterID": {
-        "description": "Meter identifier.",
+      "MeterName": {
+        "description": "Meter name.",
         "type": "string"
       },
       "Meter": {
         "type": "object",
-        "required": ["id"],
+        "required": ["name"],
         "properties": {
-          "id": {
+          "name": {
             "type": "string",
-            "description": "The id of the meter."
+            "description": "The name of the meter."
           },
           "description": {
             "type": "string",
@@ -1259,6 +1263,10 @@
           "unit": {
             "type": "string",
             "description": "The physical measurment unit."
+          },
+          "fractionalDigits": {
+            "type": "number",
+            "description": "decimal precission."
           },
           "serial": {
             "type": "string",
