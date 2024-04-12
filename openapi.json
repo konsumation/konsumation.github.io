@@ -277,6 +277,16 @@
         "summary": "add category",
         "operationId": "addCategory",
         "description": "Add a new category.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "success message.",
@@ -541,6 +551,16 @@
         "summary": "add a meter to a category",
         "operationId": "addCategoryMeter",
         "description": "Add a meter to a category.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Meter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success message.",
@@ -577,6 +597,16 @@
         "summary": "update a meter of a category",
         "operationId": "updateCategoryMeter",
         "description": "Update a meter.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Meter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success message.",
@@ -664,6 +694,16 @@
         "summary": "add a note to a meter",
         "operationId": "addMeterNote",
         "description": "add a note to a meter.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Note"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success message.",
@@ -700,6 +740,16 @@
         "summary": "add a note of a meter",
         "operationId": "updateNote",
         "description": "Update a note.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Note"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success message.",
@@ -1066,6 +1116,16 @@
         "summary": "add a note to a meter",
         "operationId": "addMeterNote",
         "description": "add a note to a meter.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Note"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success message.",
@@ -1102,6 +1162,16 @@
         "summary": "add a note of a meter",
         "operationId": "updateNote",
         "description": "Update a note.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Note"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success message.",
@@ -1230,7 +1300,8 @@
           },
           "fractionalDigits": {
             "type": "number",
-            "description": "decimal precission."
+            "description": "decimal precission.",
+            "default": 2
           },
           "order": {
             "type": "number",
@@ -1241,6 +1312,7 @@
           "name": "EV",
           "description": "mains power",
           "unit": "m3",
+          "fractionalDigits": 3,
           "order": 1
         }
       },
@@ -1266,11 +1338,17 @@
           },
           "fractionalDigits": {
             "type": "number",
-            "description": "decimal precission."
+            "description": "decimal precission.",
+            "default": 2
           },
           "serial": {
             "type": "string",
             "description": "The serial number of the meter."
+          },
+          "validFrom": {
+            "type": "string",
+            "format": "date-time",
+            "description": "date + time when this meter becomes valid."
           }
         },
         "example": {
