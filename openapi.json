@@ -422,6 +422,93 @@
             "konsum_auth": ["konsum.value"]
           }
         ]
+      }
+    },
+    "/category/{category}/value/{date}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryName"
+          }
+        },
+        {
+          "name": "date",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Date"
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "description": "Limits the number of entries delivered.",
+          "required": false,
+          "schema": {
+            "type": "integer"
+          }
+        },
+        {
+          "name": "reverse",
+          "in": "query",
+          "description": "Reverses the order in which the entries are delivered.",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "get": {
+        "tags": ["value"],
+        "summary": "get values of a category",
+        "operationId": "getCategoryValue",
+        "description": "One value of a category.",
+        "responses": {
+          "200": {
+            "description": "Value list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Value"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Unsupported content-type.",
+            "content": {
+              "text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value"]
+          }
+        ]
       },
       "post": {
         "tags": ["value"],
@@ -545,6 +632,62 @@
             "konsum_auth": ["konsum.note"]
           }
         ]
+      }
+    },
+    "/category/{category}/note/{note}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryName"
+          }
+        },
+        {
+          "name": "note",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/NoteName"
+          }
+        }
+      ],
+      "get": {
+        "tags": ["note"],
+        "summary": "get note of a category",
+        "operationId": "getCategoryNote",
+        "description": "One note of a category.",
+        "responses": {
+          "200": {
+            "description": "One note.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Note"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category or note error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note"]
+          }
+        ]
       },
       "put": {
         "tags": ["note"],
@@ -576,11 +719,11 @@
             "description": "Unauthorized Request"
           },
           "404": {
-            "description": "No such category or meter error message.",
+            "description": "No such category or note error message.",
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
                 }
               }
             }
@@ -622,11 +765,11 @@
             "description": "Unauthorized Request"
           },
           "404": {
-            "description": "No such category or meter error message.",
+            "description": "No such category or note error message.",
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
                 }
               }
             }
@@ -637,27 +780,7 @@
             "konsum_auth": ["konsum.note.modify"]
           }
         ]
-      }
-    },
-    "/category/{category}/note/{note}": {
-      "parameters": [
-        {
-          "name": "category",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/CategoryName"
-          }
-        },
-        {
-          "name": "note",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/NoteID"
-          }
-        }
-      ],
+      },
       "delete": {
         "tags": ["note"],
         "summary": "delete a note from a category",
@@ -678,11 +801,11 @@
             "description": "Unauthorized Request"
           },
           "404": {
-            "description": "No such category error message.",
+            "description": "No such category or note error message.",
             "content": {
               "application/text": {
                 "schema": {
-                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
+                  "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
                 }
               }
             }
@@ -979,7 +1102,53 @@
             "konsum_auth": ["konsum.value"]
           }
         ]
-      },
+      }
+    },
+    "/category/{category}/meter/{meter}/value/{date}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryName"
+          }
+        },
+        {
+          "name": "meter",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/MeterName"
+          }
+        },
+        {
+          "name": "date",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Date"
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "description": "Limits the number of entries delivered.",
+          "required": false,
+          "schema": {
+            "type": "integer"
+          }
+        },
+        {
+          "name": "reverse",
+          "in": "query",
+          "description": "Reverses the order in which the entries are delivered.",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      ],
       "post": {
         "tags": ["value"],
         "summary": "add values to a meter",
@@ -1110,7 +1279,35 @@
             "konsum_auth": ["konsum.note"]
           }
         ]
-      },
+      }
+    },
+    "/category/{category}/meter/{meter}/note/{note}": {
+      "parameters": [
+        {
+          "name": "category",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CategoryName"
+          }
+        },
+        {
+          "name": "meter",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/MeterName"
+          }
+        },
+        {
+          "name": "note",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/NoteName"
+          }
+        }
+      ],
       "put": {
         "tags": ["note"],
         "summary": "add a note to a meter",
@@ -1202,35 +1399,7 @@
             "konsum_auth": ["konsum.note.modify"]
           }
         ]
-      }
-    },
-    "/category/{category}/meter/{meter}/note/{note}": {
-      "parameters": [
-        {
-          "name": "category",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/CategoryName"
-          }
-        },
-        {
-          "name": "meter",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/MeterName"
-          }
-        },
-        {
-          "name": "note",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/NoteID"
-          }
-        }
-      ],
+      },
       "delete": {
         "tags": ["note"],
         "summary": "delete a note from a meter",
@@ -1356,17 +1525,33 @@
           "serial": "123"
         }
       },
-      "NoteID": {
+      "NoteName": {
         "description": "Note identifier.",
         "type": "string"
       },
       "Note": {
         "type": "object",
-        "required": ["id"]
+        "required": ["name"]
+      },
+      "Date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Date time"
       },
       "Value": {
         "type": "object",
-        "required": ["id"]
+        "required": ["date"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "date + time when the value was present"
+          },
+          "value": {
+            "type": "number",
+            "description": "physical value on the meter"
+          }
+        }
       },
       "State": {
         "type": "object",
@@ -1442,6 +1627,14 @@
         }
       },
       "NoSuchCategoryOrMeterMessage": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "NoSuchCategoryOrNoteMessage": {
         "type": "object",
         "properties": {
           "message": {
