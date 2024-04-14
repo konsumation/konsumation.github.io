@@ -291,6 +291,9 @@
           "200": {
             "description": "success message.",
             "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Message" }
+              },
               "application/text": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -308,6 +311,55 @@
           }
         ]
       },
+      "post": {
+        "tags": ["category"],
+        "summary": "alter a category",
+        "operationId": "updateCategory",
+        "description": "Update a category.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success message.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Message" }
+              },
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such categoryå error message.",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoSuchCategoryMessage"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.note.modify"]
+          }
+        ]
+      },
       "delete": {
         "tags": ["category"],
         "summary": "delete category",
@@ -317,6 +369,9 @@
           "200": {
             "description": "success message.",
             "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Message" }
+              },
               "application/text": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
