@@ -78,7 +78,7 @@
         "tags": ["admin"],
         "summary": "reload config",
         "operationId": "reloadConfig",
-        "description": "Reload konsum systemd config.",
+        "description": "Reload konsum config.",
         "responses": {
           "200": {
             "description": "Progress message.",
