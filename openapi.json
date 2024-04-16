@@ -1577,7 +1577,9 @@
         },
         "example": {
           "name": "EV-2020",
-          "serial": "123"
+          "serial": "123",
+          "validFrom": "2011-10-05T14:48:00.000Z",
+          "description": "new meter from utility provider"
         }
       },
       "NoteName": {
@@ -1586,7 +1588,21 @@
       },
       "Note": {
         "type": "object",
-        "required": ["name"]
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the category."
+          },
+          "description": {
+            "type": "string",
+            "description": "The human readable description of your category."
+          }
+        },
+        "example": {
+          "name": "2011-10-05T14:48:00.000Z",
+          "description": "power outage"
+        }
       },
       "Date": {
         "type": "string",
@@ -1595,7 +1611,7 @@
       },
       "Value": {
         "type": "object",
-        "required": ["date"],
+        "required": ["date", "value"],
         "properties": {
           "date": {
             "type": "string",
