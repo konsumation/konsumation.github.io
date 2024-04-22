@@ -1692,6 +1692,7 @@
           },
           "token_type": {
             "type": "string",
+            "enum": ["bearer"],
             "description": "The type of the token issued. Value is case insensitive."
           },
           "refresh_token": {
