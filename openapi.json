@@ -588,7 +588,7 @@
           }
         ]
       },
-      "post": {
+      "put": {
         "tags": ["value"],
         "summary": "add values to a category",
         "operationId": "insertCategoryValues",
@@ -1227,7 +1227,7 @@
           }
         }
       ],
-      "post": {
+      "put": {
         "tags": ["value"],
         "summary": "add values to a meter",
         "operationId": "insertMeterValues",
@@ -1523,7 +1523,7 @@
         "scheme": "bearer",
         "bearerFormat": "JWT"
       }
-    },  
+    },
     "schemas": {
       "CategoryName": {
         "description": "Category name.",
