@@ -550,10 +550,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Value"
-                  }
+                  "$ref": "#/components/schemas/Value"
                 }
               }
             }
@@ -602,7 +599,7 @@
               }
             }
           }
-        },  
+        },
         "responses": {
           "200": {
             "description": "Success message.",
@@ -1237,6 +1234,52 @@
           }
         }
       ],
+      "get": {
+        "tags": ["value"],
+        "summary": "get values of a category",
+        "operationId": "getCategoryValue",
+        "description": "One value of a category.",
+        "responses": {
+          "200": {
+            "description": "Value list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Value"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized Request"
+          },
+          "404": {
+            "description": "No such category or meter error message.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Unsupported content-type.",
+            "content": {
+              "text": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "konsum_auth": ["konsum.value"]
+          }
+        ]
+      },
       "put": {
         "tags": ["value"],
         "summary": "add values to a meter",
@@ -1251,7 +1294,7 @@
               }
             }
           }
-        },  
+        },
         "responses": {
           "200": {
             "description": "Success message.",
