@@ -593,6 +593,16 @@
         "summary": "add values to a category",
         "operationId": "insertCategoryValues",
         "description": "Insert a value into a category.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Value"
+              }
+            }
+          }
+        },  
         "responses": {
           "200": {
             "description": "Success message.",
@@ -1232,6 +1242,16 @@
         "summary": "add values to a meter",
         "operationId": "insertMeterValues",
         "description": "Insert a value into a meter.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Value"
+              }
+            }
+          }
+        },  
         "responses": {
           "200": {
             "description": "Success message.",
