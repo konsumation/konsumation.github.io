@@ -33,9 +33,6 @@
           },
           "401": {
             "description": "Unauthorized Request"
-          },
-          "415": {
-            "description": "Unsupported Media Type"
           }
         },
         "security": [
