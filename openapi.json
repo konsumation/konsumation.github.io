@@ -52,7 +52,7 @@
           "200": {
             "description": "Progress message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TextOnlyMessage"
                 }
@@ -80,7 +80,7 @@
           "200": {
             "description": "Progress message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TextOnlyMessage"
                 }
@@ -108,7 +108,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TextOnlyMessage"
                 }
@@ -134,7 +134,7 @@
           "200": {
             "description": "Backup data as text.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TextOnlyMessage"
                 }
@@ -208,7 +208,7 @@
           "401": {
             "description": "Authentication failed.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TextOnlyMessage"
                 }
@@ -281,7 +281,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -317,7 +317,7 @@
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/Message" }
               },
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -356,7 +356,7 @@
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/Message" }
               },
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -369,7 +369,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -395,7 +395,7 @@
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/Message" }
               },
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -408,7 +408,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -477,7 +477,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -564,7 +564,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -597,7 +597,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -610,7 +610,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -633,7 +633,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -646,7 +646,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -697,7 +697,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -753,7 +753,7 @@
           "404": {
             "description": "No such category or note error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
                 }
@@ -786,7 +786,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -799,7 +799,7 @@
           "404": {
             "description": "No such category or note error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
                 }
@@ -832,7 +832,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -845,7 +845,7 @@
           "404": {
             "description": "No such category or note error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
                 }
@@ -868,7 +868,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -881,7 +881,7 @@
           "404": {
             "description": "No such category or note error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrNoteMessage"
                 }
@@ -932,7 +932,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -985,7 +985,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -998,7 +998,7 @@
           "404": {
             "description": "No such category error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryMessage"
                 }
@@ -1031,7 +1031,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -1044,7 +1044,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1067,7 +1067,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -1080,7 +1080,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1157,7 +1157,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1236,7 +1236,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -1249,7 +1249,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1272,7 +1272,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -1285,7 +1285,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1344,7 +1344,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1405,7 +1405,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -1418,7 +1418,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1451,7 +1451,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -1464,7 +1464,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
@@ -1487,7 +1487,7 @@
           "200": {
             "description": "Success message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
                 }
@@ -1500,7 +1500,7 @@
           "404": {
             "description": "No such category or meter error message.",
             "content": {
-              "application/text": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NoSuchCategoryOrMeterMessage"
                 }
