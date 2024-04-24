@@ -17,9 +17,9 @@
     "/admin/token": {
       "post": {
         "tags": ["admin"],
-        "summary": "create token",
+        "summary": "Create token.",
         "operationId": "createToken",
-        "description": "create token.",
+        "description": "Create token.",
         "responses": {
           "200": {
             "description": "token.",
@@ -45,7 +45,7 @@
     "/admin/stop": {
       "post": {
         "tags": ["admin"],
-        "summary": "stop the service",
+        "summary": "Stop the service.",
         "operationId": "stopServer",
         "description": "Stop konsum server.",
         "responses": {
@@ -73,7 +73,7 @@
     "/admin/reload": {
       "post": {
         "tags": ["admin"],
-        "summary": "reload config",
+        "summary": "Reload config.",
         "operationId": "reloadConfig",
         "description": "Reload konsum config.",
         "responses": {
@@ -101,7 +101,7 @@
     "/admin/backup": {
       "post": {
         "tags": ["admin"],
-        "summary": "create backup on server",
+        "summary": "Create backup on server.",
         "operationId": "backupDataOnServer",
         "description": "Create backup on server.",
         "responses": {
@@ -127,7 +127,7 @@
       },
       "get": {
         "tags": ["admin"],
-        "summary": "create backup",
+        "summary": "Create backup.",
         "operationId": "backupData",
         "description": "Create backup.",
         "responses": {
@@ -154,7 +154,7 @@
     },
     "/state": {
       "get": {
-        "summary": "service status report",
+        "summary": "Service status report.",
         "operationId": "getServiceState",
         "description": "Retrieve service state.",
         "responses": {
@@ -177,7 +177,7 @@
     "/authenticate": {
       "post": {
         "tags": ["authenticate"],
-        "summary": "user login",
+        "summary": "User login.",
         "operationId": "authenticate",
         "description": "Login to request api token.",
         "externalDocs": {
@@ -297,7 +297,7 @@
       },
       "put": {
         "tags": ["category"],
-        "summary": "add category",
+        "summary": "Add a category.",
         "operationId": "addCategory",
         "description": "Add a new category.",
         "requestBody": {
@@ -336,7 +336,7 @@
       },
       "post": {
         "tags": ["category"],
-        "summary": "alter a category",
+        "summary": "Alter a category.",
         "operationId": "updateCategory",
         "description": "Update a category.",
         "requestBody": {
@@ -385,7 +385,7 @@
       },
       "delete": {
         "tags": ["category"],
-        "summary": "delete category",
+        "summary": "Delete a category.",
         "operationId": "deleteCategory",
         "description": "Delete a category.",
         "responses": {
@@ -454,7 +454,7 @@
       ],
       "get": {
         "tags": ["value"],
-        "summary": "get values of a category",
+        "summary": "Get values of a category.",
         "operationId": "getCategoryValues",
         "description": "List values of a category.",
         "responses": {
@@ -541,7 +541,7 @@
       ],
       "get": {
         "tags": ["value"],
-        "summary": "get values of a category",
+        "summary": "Get a value from a category.",
         "operationId": "getCategoryValue",
         "description": "One value of a category.",
         "responses": {
@@ -587,7 +587,7 @@
       },
       "put": {
         "tags": ["value"],
-        "summary": "add values to a category",
+        "summary": "Add values to a category.",
         "operationId": "insertCategoryValues",
         "description": "Insert a value into a category.",
         "requestBody": {
@@ -604,6 +604,7 @@
           "200": {
             "description": "Success message.",
             "content": {
+              "application/json": {},
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -633,13 +634,14 @@
       },
       "delete": {
         "tags": ["value"],
-        "summary": "delete values from a category",
+        "summary": "Delete values from a category.",
         "operationId": "deleteCategoryValues",
         "description": "Delete a value from a category.",
         "responses": {
           "200": {
             "description": "Success message.",
             "content": {
+              "application/json": {},
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -681,7 +683,7 @@
       ],
       "get": {
         "tags": ["note"],
-        "summary": "list notes of a category",
+        "summary": "List notes of a category.",
         "operationId": "getCategoryNotes",
         "description": "List notes of a category.",
         "responses": {
@@ -740,7 +742,7 @@
       ],
       "get": {
         "tags": ["note"],
-        "summary": "get note of a category",
+        "summary": "Get a note of a category.",
         "operationId": "getCategoryNote",
         "description": "One note of a category.",
         "responses": {
@@ -776,7 +778,7 @@
       },
       "put": {
         "tags": ["note"],
-        "summary": "add a note to a meter",
+        "summary": "Add a note to a meter.",
         "operationId": "addCategoryNote",
         "description": "add a note to a meter.",
         "requestBody": {
@@ -822,7 +824,7 @@
       },
       "post": {
         "tags": ["note"],
-        "summary": "add a note of a meter",
+        "summary": "Add a note to a meter.",
         "operationId": "updateCategoryNote",
         "description": "Update a note.",
         "requestBody": {
@@ -868,7 +870,7 @@
       },
       "delete": {
         "tags": ["note"],
-        "summary": "delete a note from a category",
+        "summary": "Delete a note from a category.",
         "operationId": "deleteCategoryNote",
         "description": "Delete a note.",
         "responses": {
@@ -916,7 +918,7 @@
       ],
       "get": {
         "tags": ["meter"],
-        "summary": "list meters of a category",
+        "summary": "List meters of a category.",
         "operationId": "getCategoryMeters",
         "description": "List meters of a category.",
         "responses": {
@@ -975,7 +977,7 @@
       ],
       "put": {
         "tags": ["meter"],
-        "summary": "add a meter to a category",
+        "summary": "Add a meter to a category.",
         "operationId": "addCategoryMeter",
         "description": "Add a meter to a category.",
         "requestBody": {
@@ -992,6 +994,7 @@
           "200": {
             "description": "Success message.",
             "content": {
+              "application/json": {},
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -1021,7 +1024,7 @@
       },
       "post": {
         "tags": ["meter"],
-        "summary": "update a meter of a category",
+        "summary": "Update a meter of a category.",
         "operationId": "updateCategoryMeter",
         "description": "Update a meter.",
         "requestBody": {
@@ -1038,6 +1041,7 @@
           "200": {
             "description": "Success message.",
             "content": {
+              "application/json": {},
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -1067,13 +1071,14 @@
       },
       "delete": {
         "tags": ["meter"],
-        "summary": "delete a meter from a category",
+        "summary": "Delete a meter from a category.",
         "operationId": "deleteCategoryMeter",
         "description": "Delete a meter.",
         "responses": {
           "200": {
             "description": "Success message.",
             "content": {
+              "application/json": {},
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -1141,7 +1146,7 @@
       ],
       "get": {
         "tags": ["value"],
-        "summary": "get values of a meter",
+        "summary": "Get values of a meter.",
         "operationId": "getMeterValues",
         "description": "List values of a meter.",
         "responses": {
@@ -1236,9 +1241,9 @@
       ],
       "get": {
         "tags": ["value"],
-        "summary": "get values of a category",
-        "operationId": "getCategoryValue",
-        "description": "One value of a category.",
+        "summary": "Get values of a meter.",
+        "operationId": "getMeterValue",
+        "description": "One value of a meter.",
         "responses": {
           "200": {
             "description": "Value list.",
@@ -1282,7 +1287,7 @@
       },
       "put": {
         "tags": ["value"],
-        "summary": "add values to a meter",
+        "summary": "Add values to a meter.",
         "operationId": "insertMeterValues",
         "description": "Insert a value into a meter.",
         "requestBody": {
@@ -1299,6 +1304,7 @@
           "200": {
             "description": "Success message.",
             "content": {
+              "application/json": {},
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -1328,13 +1334,14 @@
       },
       "delete": {
         "tags": ["value"],
-        "summary": "delete values from a meter",
+        "summary": "Delete values from a meter.",
         "operationId": "deleteMeterValues",
         "description": "Delete a value from a meter.",
         "responses": {
           "200": {
             "description": "Success message.",
             "content": {
+              "application/json": {},
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/Message"
@@ -1384,7 +1391,7 @@
       ],
       "get": {
         "tags": ["note"],
-        "summary": "list notes of a meter",
+        "summary": "List notes of a meter.",
         "operationId": "getMeterNotes",
         "description": "List notes of a meter.",
         "responses": {
@@ -1451,9 +1458,9 @@
       ],
       "put": {
         "tags": ["note"],
-        "summary": "add a note to a meter",
+        "summary": "Add a note to a meter.",
         "operationId": "addMeterNote",
-        "description": "add a note to a meter.",
+        "description": "Add a note to a meter.",
         "requestBody": {
           "required": true,
           "content": {
@@ -1497,7 +1504,7 @@
       },
       "post": {
         "tags": ["note"],
-        "summary": "add a note of a meter",
+        "summary": "Update a note.",
         "operationId": "updateNote",
         "description": "Update a note.",
         "requestBody": {
@@ -1543,7 +1550,7 @@
       },
       "delete": {
         "tags": ["note"],
-        "summary": "delete a note from a meter",
+        "summary": "Delete a note from a meter.",
         "operationId": "deleteMeterNote",
         "description": "Delete a note.",
         "responses": {
