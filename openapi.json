@@ -32,12 +32,19 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           }
         },
         "security": [
           {
-            "konsum_auth": ["konsum.admin.token"]
+            "konsumAuth": ["konsum.admin.token"]
           }
         ]
       }
@@ -60,12 +67,19 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           }
         },
         "security": [
           {
-            "konsum_auth": ["konsum.admin.stop"]
+            "konsumAuth": ["konsum.admin.stop"]
           }
         ]
       }
@@ -88,12 +102,19 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           }
         },
         "security": [
           {
-            "konsum_auth": ["konsum.admin.reload"]
+            "konsumAuth": ["konsum.admin.reload"]
           }
         ]
       }
@@ -116,12 +137,19 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           }
         },
         "security": [
           {
-            "konsum_auth": ["konsum.admin.backup"]
+            "konsumAuth": ["konsum.admin.backup"]
           }
         ]
       },
@@ -142,12 +170,19 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           }
         },
         "security": [
           {
-            "konsum_auth": ["konsum.admin.backup"]
+            "konsumAuth": ["konsum.admin.backup"]
           }
         ]
       }
@@ -239,12 +274,19 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           }
         },
         "security": [
           {
-            "konsum_auth": ["konsum.category"]
+            "konsumAuth": ["konsum.category"]
           }
         ]
       }
@@ -276,7 +318,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -291,7 +340,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.category"]
+            "konsumAuth": ["konsum.category"]
           }
         ]
       },
@@ -325,12 +374,19 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           }
         },
         "security": [
           {
-            "konsum_auth": ["konsum.category.add"]
+            "konsumAuth": ["konsum.category.add"]
           }
         ]
       },
@@ -364,7 +420,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -379,7 +442,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note.modify"]
+            "konsumAuth": ["konsum.note.modify"]
           }
         ]
       },
@@ -403,7 +466,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -418,7 +488,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.category.delete"]
+            "konsumAuth": ["konsum.category.delete"]
           }
         ]
       }
@@ -472,7 +542,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -497,7 +574,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value"]
+            "konsumAuth": ["konsum.value"]
           }
         ]
       }
@@ -556,7 +633,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -581,7 +665,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value"]
+            "konsumAuth": ["konsum.value"]
           }
         ]
       },
@@ -613,7 +697,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -628,7 +719,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value.add"]
+            "konsumAuth": ["konsum.value.add"]
           }
         ]
       },
@@ -650,7 +741,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -665,7 +763,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value.delete"]
+            "konsumAuth": ["konsum.value.delete"]
           }
         ]
       }
@@ -701,7 +799,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -716,7 +821,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note"]
+            "konsumAuth": ["konsum.note"]
           }
         ]
       }
@@ -757,7 +862,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or note error message.",
@@ -772,7 +884,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note"]
+            "konsumAuth": ["konsum.note"]
           }
         ]
       },
@@ -803,7 +915,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or note error message.",
@@ -818,7 +937,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note.add"]
+            "konsumAuth": ["konsum.note.add"]
           }
         ]
       },
@@ -849,7 +968,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or note error message.",
@@ -864,7 +990,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note.modify"]
+            "konsumAuth": ["konsum.note.modify"]
           }
         ]
       },
@@ -900,7 +1026,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note.delete"]
+            "konsumAuth": ["konsum.note.delete"]
           }
         ]
       }
@@ -936,7 +1062,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -951,7 +1084,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.meter"]
+            "konsumAuth": ["konsum.meter"]
           }
         ]
       }
@@ -1003,7 +1136,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category error message.",
@@ -1018,7 +1158,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.meter.add"]
+            "konsumAuth": ["konsum.meter.add"]
           }
         ]
       },
@@ -1050,7 +1190,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1065,7 +1212,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.meter.modify"]
+            "konsumAuth": ["konsum.meter.modify"]
           }
         ]
       },
@@ -1087,7 +1234,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1102,7 +1256,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.meter.delete"]
+            "konsumAuth": ["konsum.meter.delete"]
           }
         ]
       }
@@ -1164,7 +1318,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1189,7 +1350,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value"]
+            "konsumAuth": ["konsum.value"]
           }
         ]
       }
@@ -1256,7 +1417,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1281,7 +1449,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value"]
+            "konsumAuth": ["konsum.value"]
           }
         ]
       },
@@ -1313,7 +1481,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1328,7 +1503,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value.add"]
+            "konsumAuth": ["konsum.value.add"]
           }
         ]
       },
@@ -1350,7 +1525,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1365,7 +1547,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.value.delete"]
+            "konsumAuth": ["konsum.value.delete"]
           }
         ]
       }
@@ -1409,7 +1591,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1424,7 +1613,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note"]
+            "konsumAuth": ["konsum.note"]
           }
         ]
       }
@@ -1483,7 +1672,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1498,7 +1694,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note.add"]
+            "konsumAuth": ["konsum.note.add"]
           }
         ]
       },
@@ -1529,7 +1725,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1544,7 +1747,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note.modify"]
+            "konsumAuth": ["konsum.note.modify"]
           }
         ]
       },
@@ -1565,7 +1768,14 @@
             }
           },
           "401": {
-            "description": "Unauthorized Request"
+            "description": "Unauthorized Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedErrorMessage"
+                }
+              }
+            }
           },
           "404": {
             "description": "No such category or meter error message.",
@@ -1580,7 +1790,7 @@
         },
         "security": [
           {
-            "konsum_auth": ["konsum.note.delete"]
+            "konsumAuth": ["konsum.note.delete"]
           }
         ]
       }
@@ -1588,7 +1798,7 @@
   },
   "components": {
     "securitySchemes": {
-      "konsum_auth": {
+      "konsumAuth": {
         "type": "http",
         "scheme": "bearer",
         "bearerFormat": "JWT"
@@ -1782,6 +1992,9 @@
             "type": "string"
           }
         }
+      },
+      "UnauthorizedErrorMessage": {
+        "type": "string"
       },
       "NoSuchCategoryMessage": {
         "type": "string"
