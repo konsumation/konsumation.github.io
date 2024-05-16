@@ -1,18 +1,21 @@
 {
-  "openapi": "3.0.3",
-  "servers": [
-    {
-      "url": "https://mydomain.com"
-    }
-  ],
+  "openapi": "3.1.0",
   "info": {
     "title": "Collect resource usage in a home environment",
     "version": "0.0.0-semantic-release",
+    "contact": {
+      "email": "markus.felten@gmx.de"
+    },
     "license": {
       "name": "MIT",
       "url": "https://github.com/konsumation/openapi/LICENSE"
     }
   },
+  "servers": [
+    {
+      "url": "https://mydomain.com"
+    }
+  ],
   "paths": {
     "/admin/token": {
       "post": {
