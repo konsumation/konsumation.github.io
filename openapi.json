@@ -1810,15 +1810,15 @@
     "schemas": {
       "CategoryName": {
         "description": "Category name.",
-        "type": "string"
+        "type": "string",
+        "pattern": "^[A-Za-z0-9-_]+$"
       },
       "Category": {
         "type": "object",
         "required": ["name"],
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the category."
+            "$ref": "#/components/schemas/CategoryName"
           },
           "description": {
             "type": "string",
@@ -1848,15 +1848,15 @@
       },
       "MeterName": {
         "description": "Meter name.",
-        "type": "string"
+        "type": "string",
+        "pattern": "^[A-Za-z0-9-_]+$"
       },
       "Meter": {
         "type": "object",
         "required": ["name"],
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the meter."
+            "$ref": "#/components/schemas/MeterName"
           },
           "description": {
             "type": "string",
@@ -1890,15 +1890,15 @@
       },
       "NoteName": {
         "description": "Note identifier.",
-        "type": "string"
+        "type": "string",
+        "pattern": "^[A-Za-z0-9-_]+$"
       },
       "Note": {
         "type": "object",
         "required": ["name"],
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the category."
+            "$ref": "#/components/schemas/NoteName"
           },
           "description": {
             "type": "string",
