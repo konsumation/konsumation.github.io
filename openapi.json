@@ -1835,7 +1835,7 @@
           },
           "order": {
             "type": "number",
-            "description": "sorting order higher nuber come first."
+            "description": "sorting order higher number come first."
           }
         },
         "example": {
