@@ -626,7 +626,7 @@
         "description": "One value of a category.",
         "responses": {
           "200": {
-            "description": "Value list.",
+            "description": "One value",
             "content": {
               "application/json": {
                 "schema": {
@@ -1410,7 +1410,7 @@
         "description": "One value of a meter.",
         "responses": {
           "200": {
-            "description": "Value list.",
+            "description": "One value.",
             "content": {
               "application/json": {
                 "schema": {
