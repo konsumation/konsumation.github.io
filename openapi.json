@@ -1811,7 +1811,7 @@
       "CategoryName": {
         "description": "Category name.",
         "type": "string",
-        "pattern": "^[A-Za-z0-9-_]+$"
+        "pattern": "^[A-Za-z0-9-_\\.:]+$"
       },
       "Category": {
         "type": "object",
@@ -1849,7 +1849,7 @@
       "MeterName": {
         "description": "Meter name.",
         "type": "string",
-        "pattern": "^[A-Za-z0-9-_]+$"
+        "pattern": "^[A-Za-z0-9-_\\.:]+$"
       },
       "Meter": {
         "type": "object",
@@ -1891,7 +1891,7 @@
       "NoteName": {
         "description": "Note identifier.",
         "type": "string",
-        "pattern": "^[A-Za-z0-9-_]+$"
+        "pattern": "^[A-Za-z0-9-_\\.:]+$"
       },
       "Note": {
         "type": "object",
